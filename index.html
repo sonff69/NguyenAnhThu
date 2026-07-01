@@ -71,7 +71,7 @@
     }
   </style>
 </head>
-<body class="star-wallpaper font-body text-cocoa min-h-screen relative selection:bg-blush selection:text-cocoa">
+<body class="avatar-grid-wallpaper font-body text-cocoa min-h-screen relative selection:bg-blush selection:text-cocoa">
 
   <!-- LỚP PHỦ MỜ KÍNH TOÀN TRANG (Frosted Glass Overlay) -->
   <!-- Lớp phủ tạo mờ lưới ảnh chân dung phía dưới, đảm bảo tính thẩm mỹ học đường và bảo vệ độ đọc văn bản -->
@@ -106,12 +106,40 @@
   <!-- MAIN WRAPPER -->
   <main class="relative z-10 max-w-6xl mx-auto px-4 pt-32 pb-24 space-y-24">
 
-    <!-- HERO SECTION (Trang giới thiệu bản thân mờ kính) -->
+    <!-- HERO SECTION (Trang giới thiệu bản thân mờ kính - Đã đảo bên chữ và avt) -->
     <section class="min-h-[80vh] flex flex-col justify-center relative">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Cột Trái: Giới thiệu bản thân cá nhân hóa -->
-        <div class="lg:col-span-7 space-y-6">
+        <!-- Cột TRÁI trên desktop, DƯỚI trên mobile: Khung ảnh Polaroid trung tâm chứa Hình 1.jpg -->
+        <div class="lg:col-span-5 flex justify-center lg:order-1 order-2">
+          <div class="relative p-6">
+            <!-- Họa tiết lưới chấm đằng sau khung ảnh -->
+            <div class="absolute inset-0 dot-pattern border-cozy rounded-3xl opacity-60"></div>
+            
+            <!-- Khung ảnh Polaroid chứa ảnh ngôi sao của Hình 1.jpg -->
+            <div class="relative bg-white p-4 pb-8 rounded-3xl shadow-polaroid border-cozy -rotate-2 hover:rotate-0 transition-transform duration-500 w-full max-w-[320px]">
+              <!-- Nhãn dán trên ảnh -->
+              <span class="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold tracking-wider text-rose-500 z-10 shadow-sm">
+                ULISer 🎒
+              </span>
+
+              <!-- Ảnh đại diện Hình 1.jpg (Họa tiết sao vàng) -->
+              <div class="aspect-square rounded-2xl overflow-hidden border border-cocoa/10">
+                <img src="./Hình 1.jpg" alt="Nguyễn Anh Thư Wallpaper Star" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-rose-500 font-bold text-xl bg-rose-100\'>Hình 1.jpg Placeholder</div>'"/>
+              </div>
+
+              <!-- Ghi chú dưới ảnh -->
+              <div class="mt-4 text-center">
+                <span class="text-[10px] uppercase tracking-widest text-cocoa/40 font-bold block pt-2 border-t border-cocoa/10">
+                  Nguyễn Anh Thư · ULIS 2026
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột PHẢI trên desktop, TRÊN trên mobile: Giới thiệu bản thân cá nhân hóa -->
+        <div class="lg:col-span-7 space-y-6 lg:order-2 order-1">
           <!-- Nhãn trường Đại học mờ kính -->
           <div class="inline-block bg-[#f5cbc8]/55 backdrop-blur-md border border-[#f5cbc8]/60 text-rose-500 font-bold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm">
             Đại học Ngoại ngữ - ĐHQGHN
@@ -164,34 +192,6 @@
           </div>
         </div>
 
-        <!-- Cột Phải: Khung ảnh Polaroid trung tâm chứa Hình 1.jpg -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="relative p-6">
-            <!-- Họa tiết lưới chấm đằng sau khung ảnh -->
-            <div class="absolute inset-0 dot-pattern border-cozy rounded-3xl opacity-60"></div>
-            
-            <!-- Khung ảnh Polaroid chứa ảnh ngôi sao của Hình 1.jpg -->
-            <div class="relative bg-white p-4 pb-8 rounded-3xl shadow-polaroid border-cozy rotate-2 hover:rotate-0 transition-transform duration-500 w-full max-w-[320px]">
-              <!-- Nhãn dán trên ảnh -->
-              <span class="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold tracking-wider text-rose-500 z-10 shadow-sm">
-                ULISer 🎒
-              </span>
-
-              <!-- Ảnh đại diện Hình 1.jpg (Họa tiết sao vàng) -->
-              <div class="aspect-square rounded-2xl overflow-hidden border border-cocoa/10">
-                <img src="./Hình 1.jpg" alt="Nguyễn Anh Thư Wallpaper Star" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-rose-500 font-bold text-xl bg-rose-100\'>Hình 1.jpg Placeholder</div>'"/>
-              </div>
-
-              <!-- Ghi chú dưới ảnh -->
-              <div class="mt-4 text-center">
-                <span class="text-[10px] uppercase tracking-widest text-cocoa/40 font-bold block pt-2 border-t border-cocoa/10">
-                  Nguyễn Anh Thư · ULIS 2026
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <!-- Mũi tên Cuộn xuống dưới trang đầu -->
@@ -214,9 +214,19 @@
       </div>
     </section>
 
-    <!-- SECTION I: TRANG GIỚI THIỆU (Bên chữ bên trái, bên ảnh bên phải) -->
+    <!-- SECTION I: TRANG GIỚI THIỆU (Bám sát yêu cầu V.1) -->
     <section id="intro" class="bg-white/70 backdrop-blur-md border-cozy rounded-[2.5rem] p-8 md:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <!-- Nội dung giới thiệu cá nhân học thuật (Bên trái) -->
+      <!-- Grid icon bên trái -->
+      <div class="lg:col-span-5 grid grid-cols-3 gap-4">
+        <div class="bg-blush/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">🌸</div>
+        <div class="bg-butter/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">⭐</div>
+        <div class="bg-mint/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">📚</div>
+        <div class="bg-sky/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">🌷</div>
+        <div class="bg-blush/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">✍️</div>
+        <div class="bg-butter/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">☕</div>
+      </div>
+
+      <!-- Nội dung giới thiệu cá nhân học thuật -->
       <div class="lg:col-span-7 space-y-6">
         <div class="space-y-2">
           <span class="text-rose-400 font-display italic text-sm">Sinh viên Ngành Ngôn ngữ & Văn hóa Trung Quốc ⋆</span>
@@ -235,19 +245,9 @@
           </p>
         </div>
       </div>
-
-      <!-- Grid icon bên phải -->
-      <div class="lg:col-span-5 grid grid-cols-3 gap-4">
-        <div class="bg-blush/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">🌸</div>
-        <div class="bg-butter/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">⭐</div>
-        <div class="bg-mint/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">📚</div>
-        <div class="bg-sky/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">🌷</div>
-        <div class="bg-blush/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">✍️</div>
-        <div class="bg-butter/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">☕</div>
-      </div>
     </section>
 
-    <!-- SECTION II: TRANG DỰ ÁN (Đã đổi tên tiêu đề và xổ sẵn toàn bộ nội dung học bạ thực tế) -->
+    <!-- SECTION II: TRANG DỰ ÁN (Xổ sẵn toàn bộ nội dung học bạ thực tế kèm minh họa chi tiết - Đổi tiêu đề thành Bài tập thực hành) -->
     <section id="projects" class="space-y-12">
       <div class="text-center max-w-xl mx-auto space-y-3">
         <span class="text-rose-400 text-2xl">✿ ⋆ ✦</span>
@@ -284,30 +284,10 @@
             <h3 class="font-display font-extrabold text-2xl text-cocoa">Quản lý tệp và thư mục</h3>
             <div class="text-sm text-cocoa/90 space-y-3 pt-2 border-t border-cocoa/10">
               <p><strong>🎯 Mục tiêu bài tập:</strong> Làm quen với các thao tác cơ bản trong hệ thống tệp tin và thư mục của hệ điều hành Windows, thiết lập cấu trúc lưu trữ gọn gàng phục vụ lưu giữ bài tập cá nhân.</p>
-            </div>
-            <div>
-              <strong class="text-rose-500 font-display block text-base mb-1">📋 Tóm tắt quá trình thực hiện:</strong>
-              <ul class="list-decimal pl-4 space-y-1">
-                <li>Mở File Explorer trên thanh tác vụ hoặc dùng phím tắt <code class="bg-cream px-1 py-0.5 rounded border font-mono">Win + E</code>.</li>
-                <li>Truy cập ổ đĩa dữ liệu <code class="bg-cream px-1 py-0.5 rounded border font-mono">DATA (D:)</code> để thao tác dữ liệu an toàn.</li>
-                <li>Tạo thư mục mới <code class="bg-cream px-1 py-0.5 rounded border font-mono">ThucHanh_NguyenAnhThu</code> trực tiếp trên ổ D.</li>
-                <li>Tạo tệp văn bản <code class="bg-cream px-1 py-0.5 rounded border font-mono">GhiChu.txt</code>, sau đó nhấp phải chọn Rename để đổi tên thành <code class="bg-cream px-1 py-0.5 rounded border font-mono">GhiChuQuanTrong.txt</code>.</li>
-                <li>Tạo thư mục con tên <code class="bg-cream px-1 py-0.5 rounded border font-mono">TaiLieu</code>.</li>
-                <li>Thực hiện sao chép (Copy & Paste) tệp <code class="bg-cream px-1 py-0.5 rounded border font-mono">GhiChuQuanTrong.txt</code> sang thư mục <code class="bg-cream px-1 py-0.5 rounded border font-mono">TaiLieu</code>.</li>
-                <li>Thực hiện di chuyển (Cut & Paste) tệp tin mới tạo <code class="bg-cream px-1 py-0.5 rounded border font-mono">DiChuyen.txt</code> vào thư mục <code class="bg-cream px-1 py-0.5 rounded border font-mono">TaiLieu</code>.</li>
-                <li>Thao tác xóa tệp tin <code class="bg-cream px-1 py-0.5 rounded border font-mono">GhiChuQuanTrong.txt</code> đưa vào Thùng rác (Recycle Bin).</li>
-                <li>Thao tác xóa vĩnh viễn tệp <code class="bg-cream px-1 py-0.5 rounded border font-mono">DiChuyen.txt</code> bằng tổ hợp phím <code class="bg-cream px-1 py-0.5 rounded border font-mono">Shift + Delete</code>.</li>
-                <li>Khôi phục (Restore) tệp tin <code class="bg-cream px-1 py-0.5 rounded border font-mono">GhiChuQuanTrong.txt</code> từ Thùng rác về lại thư mục ban đầu.</li>
-              </ul>
-            </div>
-            <div class="bg-[#faf6eb]/90 p-4 rounded-xl space-y-2 border-cozy">
-              <strong class="text-cocoa font-bold block text-xs uppercase tracking-wider">💾 Kết quả lưu trữ hệ thống:</strong>
-              <p class="font-mono text-xs text-emerald-800 leading-tight">
-                📂 [D:\ThucHanh_NguyenAnhThu]<br>
-                ├── 📄 GhiChuQuanTrong.txt (Đã khôi phục từ Recycle Bin)<br>
-                └── 📂 [TaiLieu]<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;└── 📄 GhiChuQuanTrong.txt (Bản sao copy)
-              </p>
+              <p><strong>📋 Tóm tắt quá trình:</strong> Mở File Explorer (<code class="bg-cream px-1 rounded border">Win + E</code>) -> Tạo thư mục <code class="bg-cream px-1 rounded border">ThucHanh_NguyenAnhThu</code> trên ổ D -> Tạo file <code class="bg-cream px-1 rounded border">GhiChu.txt</code> đổi tên thành <code class="bg-cream px-1 rounded border">GhiChuQuanTrong.txt</code> -> Tạo thư mục con <code class="bg-cream px-1 rounded border">TaiLieu</code> -> Thực hiện sao chép tệp tin -> Di chuyển tệp <code class="bg-cream px-1 rounded border">DiChuyen.txt</code> -> Thực hành xóa tệp vào Thùng rác (Recycle Bin) và khôi phục (Restore).</p>
+              <div class="bg-[#faf6eb]/90 p-3 rounded-xl text-xs space-y-1">
+                <span class="font-bold text-emerald-800">✓ Kết quả đạt được:</span> 100% tệp tin được sắp xếp khoa học, khôi phục nguyên vẹn cấu trúc đường dẫn học liệu cá nhân.
+              </div>
             </div>
           </div>
         </div>
@@ -416,20 +396,22 @@
             <!-- Minh họa slide trình chiếu bài học thuyết trình ngoại ngữ -->
             <div class="absolute inset-2 bg-gradient-to-tr from-sky/40 to-blue-200/40 rounded-xl p-3 text-[9px] text-cocoa text-left overflow-y-auto border border-blue-200/50 flex flex-col justify-between">
               <div class="bg-white/95 p-1 rounded shadow-sm flex items-center gap-2 mb-1">
-                <span class="text-xs text-cocoa/50 font-bold">Ứng dụng AI</span>
+                <span class="text-xs">🤖</span>
+                <div>
+                  <span class="font-bold block">Slide 1/10: Ứng dụng AI trong học tập</span>
+                  <span class="text-slate-500">Mô phỏng hình vẽ DALL-E học sinh học tiếng Trung</span>
+                </div>
               </div>
-              <div class="text-[10px] text-cocoa/80 p-2">
-                - Sử dụng ChatGPT xây dựng dàn ý 10 slide thuyết trình.<br>
-                - Dùng ChatGPT, Gemini, Duolingo Max để lấy ví dụ thực tiễn.<br>
-                - Dùng DALL-E 3 tạo ảnh minh họa học tiếng Trung.<br>
-                - Dùng Canva AI đồng bộ hóa bố cục thiết kế.
+              <div class="text-[8px] text-blue-900 leading-snug">
+                • <strong>ChatGPT:</strong> Lập dàn ý bài nói, ví dụ thực tế học từ vựng HSK.<br>
+                • <strong>Canva AI:</strong> Tạo khuôn mẫu thiết kế Slide đồng bộ, trực quan hóa dữ liệu màu sắc.
               </div>
             </div>
           </div>
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <span class="text-[10px] font-bold tracking-wider uppercase text-blue-600 bg-sky/40 px-2.5 py-1 rounded-full">BÀI TẬP 5 (MỤC 5.4)</span>
-              <span class="text-xs text-cocoa/50 font-bold">Chương 5: Sáng tạo nội dung với AI</span>
+              <span class="text-xs text-cocoa/50 font-bold">Chương 5: Sáng tạo nội dung số</span>
             </div>
             <h3 class="font-display font-extrabold text-2xl text-cocoa">Ứng dụng AI sáng tạo nội dung số</h3>
             <div class="text-sm text-cocoa/90 space-y-3 pt-2 border-t border-cocoa/10">
@@ -461,13 +443,13 @@
           <div class="space-y-2">
             <div class="flex items-center justify-between">
               <span class="text-[10px] font-bold tracking-wider uppercase text-amber-600 bg-butter/50 px-2.5 py-1 rounded-full">BÀI TẬP 6 (MỤC 6.4)</span>
-              <span class="text-xs text-cocoa/50 font-bold">Đạo đức số & Liêm chính học thuật</span>
+              <span class="text-xs text-cocoa/50 font-bold">Chương 6: An toàn & liêm chính học thuật</span>
             </div>
             <h3 class="font-display font-extrabold text-2xl text-cocoa">Sử dụng AI có trách nhiệm</h3>
             <div class="text-sm text-cocoa/90 space-y-3 pt-2 border-t border-cocoa/10">
-              <p><strong>🎯 Cam kết cá nhân:</strong> Kiến tạo hệ thống nguyên tắc đạo đức và hành vi chuẩn mực khi ứng dụng Trí tuệ nhân tạo học đường.</p>
+              <p><strong>🎯 Cam kết cá nhân:</strong> Cam kết hành vi ứng xử văn minh và đạo đức khoa học khi sử dụng trí tuệ nhân tạo.</p>
               <p><strong>📋 Tóm tắt quá trình:</strong> Phân tích chính sách AI của Trường Đại học Ngoại ngữ - ĐHQGHN; Định nghĩa ranh giới giữa hỗ trợ hợp lý (gợi ý ý tưởng, rà soát lỗi ngôn ngữ) và gian lận (đạo văn, phụ thuộc thụ động). Thiết lập bộ 7 nguyên tắc liêm chính học thuật cá nhân.</p>
-              <div class="bg-[#faf6eb]/90 p-4 rounded-xl border-cozy text-xs space-y-1.5 text-cocoa/80">
+              <div class="bg-[#faf6eb]/90 p-3 rounded-xl text-xs space-y-1.5 text-cocoa/80">
                 <strong class="text-cocoa font-bold block uppercase">📜 Cam kết đạo đức học thuật của Nguyễn Anh Thư:</strong>
                 <p>1. <strong>Xác thực nguồn tin:</strong> Mọi tri thức học thuật do AI cung cấp phải được đối chiếu chéo lại với giáo trình và sách báo đã xuất bản.</p>
                 <p>2. <strong>Trích nguồn minh bạch:</strong> Khi tham khảo các ý tưởng lập luận của AI, luôn bổ sung chú thích rõ ràng cuối bài báo cáo.</p>
