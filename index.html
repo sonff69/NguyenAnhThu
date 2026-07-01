@@ -106,8 +106,8 @@
   <!-- MAIN WRAPPER -->
   <main class="relative z-10 max-w-6xl mx-auto px-4 pt-32 pb-24 space-y-24">
 
-    <!-- HERO SECTION (Trang giới thiệu bản thân mờ kính - Đã đảo bên chữ và avt) -->
-    <section class="min-h-[80vh] flex flex-col justify-center relative">
+    <!-- HERO SECTION (Trang giới thiệu bản thân mờ kính - Đã sửa lỗi đè chữ) -->
+    <section class="min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center relative pb-24 lg:pb-32">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Cột TRÁI trên desktop, DƯỚI trên mobile: Khung ảnh Polaroid trung tâm chứa Hình 1.jpg -->
@@ -183,8 +183,8 @@
 
           <!-- Cặp nút hành động dẫn trực tiếp tới Drive bài tập -->
           <div class="flex flex-wrap gap-4 pt-2">
-            <a href="https://drive.google.com/drive/folders/1-ndoSF_i39gt08zNJA2nlSqu0_tTzX0e" target="_blank" class="bg-[#f5cbc8]/90 hover:bg-[#ea7a9a] hover:text-white text-rose-600 px-6 py-3.5 rounded-full font-bold text-sm tracking-wide transition-all shadow-sm">
-              Xem Bài Tập Google Drive
+            <a href="#projects" class="bg-[#f5cbc8]/90 hover:bg-[#ea7a9a] hover:text-white text-rose-600 px-6 py-3.5 rounded-full font-bold text-sm tracking-wide transition-all shadow-sm">
+              Xem bài tập
             </a>
             <a href="#contact" class="border-cozy bg-white/50 hover:bg-white text-cocoa px-6 py-3.5 rounded-full font-bold text-sm tracking-wide transition-all">
               Trực tiếp liên hệ
@@ -194,11 +194,11 @@
 
       </div>
 
-      <!-- Mũi tên Cuộn xuống dưới trang đầu -->
-      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-center hidden lg:block animate-bounce">
-        <a href="#intro" class="text-xs font-bold text-cocoa/40 tracking-widest uppercase hover:text-rose-400 transition-colors">
+      <!-- Mũi tên Cuộn xuống dưới trang đầu (Đã tách rời hoàn toàn khỏi nút bấm) -->
+      <div class="absolute bottom-1 left-1/2 -translate-x-1/2 text-center hidden lg:block animate-bounce z-20">
+        <a href="#intro" class="text-[10px] font-bold text-cocoa/40 tracking-widest uppercase hover:text-rose-400 transition-colors block">
           Cuộn Xuống<br>
-          <span class="text-sm">↓</span>
+          <span class="text-xs">↓</span>
         </a>
       </div>
     </section>
@@ -247,7 +247,7 @@
       </div>
     </section>
 
-    <!-- SECTION II: TRANG DỰ ÁN (Xổ sẵn toàn bộ nội dung học bạ thực tế kèm minh họa chi tiết - Đổi tiêu đề thành Bài tập thực hành) -->
+    <!-- SECTION II: TRANG DỰ ÁN (Xổ sẵn toàn bộ nội dung học bạ thực tế kèm minh họa chi tiết) -->
     <section id="projects" class="space-y-12">
       <div class="text-center max-w-xl mx-auto space-y-3">
         <span class="text-rose-400 text-2xl">✿ ⋆ ✦</span>
@@ -449,7 +449,7 @@
             <div class="text-sm text-cocoa/90 space-y-3 pt-2 border-t border-cocoa/10">
               <p><strong>🎯 Cam kết cá nhân:</strong> Cam kết hành vi ứng xử văn minh và đạo đức khoa học khi sử dụng trí tuệ nhân tạo.</p>
               <p><strong>📋 Tóm tắt quá trình:</strong> Phân tích chính sách AI của Trường Đại học Ngoại ngữ - ĐHQGHN; Định nghĩa ranh giới giữa hỗ trợ hợp lý (gợi ý ý tưởng, rà soát lỗi ngôn ngữ) và gian lận (đạo văn, phụ thuộc thụ động). Thiết lập bộ 7 nguyên tắc liêm chính học thuật cá nhân.</p>
-              <div class="bg-[#faf6eb]/90 p-3 rounded-xl text-xs space-y-1.5 text-cocoa/80">
+              <div class="bg-[#faf6eb]/90 p-3 rounded-xl border-cozy text-xs space-y-1.5 text-cocoa/80">
                 <strong class="text-cocoa font-bold block uppercase">📜 Cam kết đạo đức học thuật của Nguyễn Anh Thư:</strong>
                 <p>1. <strong>Xác thực nguồn tin:</strong> Mọi tri thức học thuật do AI cung cấp phải được đối chiếu chéo lại với giáo trình và sách báo đã xuất bản.</p>
                 <p>2. <strong>Trích nguồn minh bạch:</strong> Khi tham khảo các ý tưởng lập luận của AI, luôn bổ sung chú thích rõ ràng cuối bài báo cáo.</p>
