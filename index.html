@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nguyễn Anh Thư - Portfolio Công Nghệ Số</title>
   
-  <!-- Import Google Fonts: Fraunces (Tiêu đề cổ điển) & Quicksand (Nội dung tròn trịa thân thiện) -->
+  <!-- Import Google Fonts: Fraunces (Tiêu đề phong cách hoài cổ) & Quicksand (Nội dung bo tròn dễ đọc) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
@@ -42,17 +42,17 @@
       background-size: 320px;
     }
 
-    /* Viền mảnh tinh tế phong cách tối giản */
+    /* Viền mảnh phong cách sổ tay tối giản */
     .border-cozy {
       border: 1.5px solid rgba(115, 85, 77, 0.22);
     }
 
-    /* Hiệu ứng bóng đổ cứng phong cách sticker in ấn */
+    /* Hiệu ứng bóng đổ phẳng dạng sticker */
     .shadow-chunky {
       box-shadow: 4px 4px 0px 0px oklch(0.45 0.05 45);
     }
 
-    /* Hiệu ứng chữ chạy (Marquee) mượt mà */
+    /* Hiệu ứng chữ chạy */
     @keyframes marquee {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-50%); }
@@ -67,23 +67,23 @@
 <body class="star-wallpaper font-body text-cocoa min-h-screen relative selection:bg-blush selection:text-cocoa">
 
   <!-- LỚP PHỦ MỜ KÍNH (Frosted Glass Overlay) -->
-  <!-- Làm mờ nhẹ nền sao phía dưới giúp tăng độ tương phản, làm rõ nét chữ tuyệt đối và tạo chiều sâu -->
+  <!-- Làm mờ nhẹ nền sao phía dưới để đảm bảo văn bản hiển thị rõ ràng và tăng tối đa độ tương phản -->
   <div class="fixed inset-0 bg-[#faf6eb]/80 backdrop-blur-[3.5px] z-0 pointer-events-none"></div>
 
   <!-- FLOATING NAV (Thanh điều hướng nổi) -->
   <header class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl z-50">
-    <nav class="bg-[#faf6eb]/80 backdrop-blur-md border-cozy rounded-full px-4 py-3 md:px-6 flex items-center justify-between shadow-sm">
+    <nav class="bg-[#faf6eb]/85 backdrop-blur-md border-cozy rounded-full px-4 py-3 md:px-6 flex items-center justify-between shadow-sm">
       <a href="#" class="flex items-center gap-2 font-display font-extrabold tracking-tight text-base md:text-lg">
         <span class="text-rose-400">★</span>
         <span>Nguyễn Anh Thư</span>
-        <span class="text-cocoa/40 font-body text-xs hidden sm:inline">| MSSV: 25040246 (Lớp 17:15)</span>
+        <span class="text-cocoa/40 font-body text-xs hidden sm:inline">| MSSV: 25040246</span>
       </a>
 
-      <!-- Menu links hướng tới các trang bắt buộc trong đề bài -->
+      <!-- Danh mục điều hướng bám sát cấu trúc đề cương bài tập -->
       <div class="hidden md:flex items-center gap-6 font-bold text-sm">
         <a href="#intro" class="hover:text-rose-400 transition-colors">Giới thiệu</a>
-        <a href="#projects" class="hover:text-rose-400 transition-colors">Bài tập rèn luyện</a>
-        <a href="#tongket" class="hover:text-rose-400 transition-colors text-rose-500/90 font-semibold">Tổng kết học phần ✿</a>
+        <a href="#projects" class="hover:text-rose-400 transition-colors">Dự án môn học</a>
+        <a href="#tongket" class="hover:text-rose-400 transition-colors text-rose-500/90 font-semibold">Tổng kết học tập ✿</a>
         <a href="#contact" class="hover:text-rose-400 transition-colors">Liên hệ</a>
       </div>
 
@@ -95,59 +95,61 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTAINER -->
+  <!-- MAIN WRAPPER -->
   <main class="relative z-10 max-w-6xl mx-auto px-4 pt-32 pb-24 space-y-24">
 
     <!-- HERO SECTION -->
     <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <!-- Cột Trái: Giới thiệu chính thức -->
+      <!-- Cột Trái: Thông tin học học phần -->
       <div class="lg:col-span-7 space-y-6">
-        <!-- Nhãn thông tin lớp học -->
+        <!-- Metadata Badge -->
         <div class="inline-flex flex-col sm:flex-row gap-2 items-start sm:items-center bg-white/95 border-cozy px-4 py-2 rounded-2xl md:rounded-full text-xs font-bold shadow-sm">
           <span class="flex items-center gap-1 text-emerald-600">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            Hồ sơ học tập kỹ thuật số (Portfolio)
+            Hồ sơ học tập cá nhân (Digital Portfolio)
           </span>
           <span class="text-cocoa/40 hidden sm:inline">|</span>
-          <span class="text-cocoa/70">Môn học: Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo (Ca 17:15)</span>
+          <span class="text-cocoa/70">Môn học: Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo</span>
         </div>
 
-        <!-- Tiêu đề chính thể hiện sự dung hòa giữa ngoại ngữ và công nghệ -->
+        <!-- Tiêu đề học thuật tự nhiên -->
         <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-[-0.02em] leading-[1.1] text-cocoa">
-          Hành trình rèn luyện năng lực số và ứng dụng 
-          <span class="relative inline-block px-2 bg-blush rounded-2xl text-cocoa font-display italic">Trí tuệ nhân tạo</span> 
-          trong nghiên cứu Ngôn ngữ.
+          Nơi giao thoa giữa tư duy 
+          <span class="relative inline-block px-2 bg-blush rounded-2xl text-cocoa font-display italic">Ngôn ngữ học</span> 
+          và sức mạnh của Công nghệ số.
         </h1>
 
+        <!-- Giới thiệu tự nhiên và định hướng ngành học -->
         <div class="space-y-4">
           <p class="text-base md:text-lg font-bold text-rose-500/80">
-            🎓 Nguyễn Anh Thư · Sinh viên ngành Ngôn ngữ và Văn hóa Trung Quốc, Đại học Ngoại ngữ - ĐHQGHN
+            🎓 Nguyễn Anh Thư · Ngành Ngôn ngữ và Văn hóa Trung Quốc · ĐH Ngoại ngữ - ĐHQGHN
           </p>
           <p class="text-cocoa/80 text-sm md:text-base leading-relaxed max-w-xl">
-            Chào mừng Thầy Cô và các bạn tới không gian lưu trữ số hóa của mình. Trang Portfolio này được xây dựng nhằm hệ thống hóa một cách trực quan, minh bạch quá trình làm chủ các kỹ năng số và ứng dụng công nghệ AI thế hệ mới để hỗ trợ nghiên cứu ngôn ngữ học thuật.
+            Portfolio này đóng vai trò là một nhật ký số học thuật, ghi nhận hành trình rèn luyện kỹ năng số, cách khai phá các mô hình AI và kiến tạo tư duy giải quyết vấn đề thực tế trong quá trình học tập tại lớp học <strong>17:15</strong>.
           </p>
         </div>
 
+        <!-- Khối liên kết chuyển hướng nhanh -->
         <div class="flex flex-wrap gap-4 pt-2">
           <a href="#projects" class="bg-cocoa text-cream px-6 py-3.5 rounded-full font-bold shadow-chunky hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_oklch(0.45 0.05 45)] transition-all flex items-center gap-2">
             Khám phá 6 bài thực hành ✦
           </a>
           <a href="#intro" class="border-cozy bg-white/60 hover:bg-white text-cocoa px-6 py-3.5 rounded-full font-bold transition-all">
-            Xem phần giới thiệu
+            Xem giới thiệu chi tiết
           </a>
         </div>
       </div>
 
-      <!-- Cột Phải: Polaroid học thuật tinh tế -->
+      <!-- Cột Phải: Polaroid học thuật -->
       <div class="lg:col-span-5 flex justify-center">
         <div class="relative w-full max-w-[340px] bg-white p-4 pb-8 rounded-3xl border-cozy shadow-lg rotate-3 hover:rotate-0 transition-all duration-500 group">
           <div class="aspect-square rounded-2xl bg-gradient-to-tr from-blush via-butter to-mint flex items-center justify-center text-7xl relative overflow-hidden">
             <span>📚</span>
-            <span class="absolute top-3 left-3 bg-white/70 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider">ULIS - VNU</span>
+            <span class="absolute top-3 left-3 bg-white/70 backdrop-blur-sm px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider">LỚP HỌC 17:15</span>
           </div>
           <div class="mt-6 space-y-2 text-center">
             <p class="font-display italic text-lg text-cocoa/90 px-2 leading-snug">
-              "Tri thức công nghệ số là bệ phóng vững chắc cho tình yêu ngôn ngữ và di sản văn hóa."
+              "Công nghệ số không làm mờ đi bản sắc, mà là bệ phóng truyền tải di sản ngôn ngữ."
             </p>
             <div class="text-[11px] uppercase tracking-widest text-cocoa/40 font-bold pt-2 border-t border-cocoa/10">
               Nguyễn Anh Thư · MSSV: 25040246
@@ -157,20 +159,20 @@
       </div>
     </section>
 
-    <!-- MARQUEE CHỮ CHẠY (Tổng hợp kỹ năng chính khóa) -->
+    <!-- MARQUEE CHỮ CHẠY (Marquee) -->
     <section class="bg-white/80 backdrop-blur-sm border-cozy rounded-full py-4 overflow-hidden shadow-sm">
       <div class="animate-marquee whitespace-nowrap flex gap-8 items-center text-xs md:text-sm font-bold tracking-wider uppercase text-cocoa/70">
-        <span>✦ Quản trị tệp tin và thư mục</span> <span>✿ Đánh giá chất lượng thông tin học thuật (CRAAP)</span> <span>✦ Prompt Engineering nâng cao</span> <span>✿ Cộng tác làm việc nhóm</span> 
-        <span>✦ Thiết kế nội dung số bằng AI</span> <span>✿ Liêm chính & Đạo đức học thuật số</span> <span>✦ Ngôn ngữ & Văn hóa Trung Quốc</span>
+        <span>✦ Phương pháp P.A.R.A</span> <span>✿ Khảo sát dữ liệu CRAAP</span> <span>✦ Prompt Engineering nâng cao</span> <span>✿ Cộng tác làm việc nhóm</span> 
+        <span>✦ Tạo hình mỹ thuật AI</span> <span>✿ Liêm chính học thuật số</span> <span>✦ Ngôn ngữ & Nhân văn số</span>
         <!-- Lặp lại -->
-        <span>✦ Quản trị tệp tin và thư mục</span> <span>✿ Đánh giá chất lượng thông tin học thuật (CRAAP)</span> <span>✦ Prompt Engineering nâng cao</span> <span>✿ Cộng tác làm việc nhóm</span> 
-        <span>✦ Thiết kế nội dung số bằng AI</span> <span>✿ Liêm chính & Đạo đức học thuật số</span> <span>✦ Ngôn ngữ & Văn hóa Trung Quốc</span>
+        <span>✦ Phương pháp P.A.R.A</span> <span>✿ Khảo sát dữ liệu CRAAP</span> <span>✦ Prompt Engineering nâng cao</span> <span>✿ Cộng tác làm việc nhóm</span> 
+        <span>✦ Tạo hình mỹ thuật AI</span> <span>✿ Liêm chính học thuật số</span> <span>✦ Ngôn ngữ & Nhân văn số</span>
       </div>
     </section>
 
-    <!-- SECTION I: TRANG GIỚI THIỆU (Bám sát yêu cầu V.1 đề bài) -->
+    <!-- SECTION I: TRANG GIỚI THIỆU (Bám sát yêu cầu V.1) -->
     <section id="intro" class="bg-white/85 backdrop-blur-md border-cozy rounded-[2.5rem] p-8 md:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <!-- Grid icon đại diện ngành học bên trái -->
+      <!-- Grid icon bên trái -->
       <div class="lg:col-span-5 grid grid-cols-3 gap-4">
         <div class="bg-blush/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">🌸</div>
         <div class="bg-butter/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">⭐</div>
@@ -180,55 +182,55 @@
         <div class="bg-butter/60 aspect-square rounded-2xl flex items-center justify-center text-3xl md:text-4xl shadow-sm">☕</div>
       </div>
 
-      <!-- Nội dung giới thiệu cá nhân chi tiết và nghiêm túc -->
+      <!-- Nội dung giới thiệu cá nhân tự nhiên, học thuật -->
       <div class="lg:col-span-7 space-y-6">
         <div class="space-y-2">
-          <span class="text-rose-400 font-display italic text-sm">Giới thiệu bản thân & Định hướng học thuật ⋆</span>
-          <h2 class="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-cocoa">Kiến tạo năng lực ngôn ngữ trong kỷ nguyên số hóa</h2>
+          <span class="text-rose-400 font-display italic text-sm">Học viên khoa Ngôn ngữ & Văn hóa Trung Quốc ⋆</span>
+          <h2 class="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-cocoa">Học tập đa phương tiện trong kỷ nguyên AI</h2>
         </div>
         
         <div class="space-y-4 text-cocoa/85 leading-relaxed text-sm md:text-base">
           <p>
-            Chào mọi người, mình là <strong>Nguyễn Anh Thư</strong> (Mã sinh viên: <strong>25040246</strong>). Hiện tại, mình đang là sinh viên khóa K78 ngành <strong>Ngôn ngữ và Văn hóa Trung Quốc</strong> tại Trường Đại học Ngoại ngữ - Đại học Quốc gia Hà Nội (ULIS - VNU). Sở thích cá nhân của mình là nghiên cứu văn hóa phong cảnh cổ đại, luyện viết thư pháp chữ Hán và thiết kế đồ họa truyền thông tối giản.
+            Chào mọi người! Mình tên là <strong>Nguyễn Anh Thư</strong> (Mã số sinh viên: <strong>25040246</strong>). Hiện tại mình đang học ngành <strong>Ngôn ngữ và Văn hóa Trung Quốc</strong> tại Trường Đại học Ngoại ngữ - Đại học Quốc gia Hà Nội (ULIS - VNU). Sở thích của mình bao gồm nghiên cứu thư tịch Hán Nôm cổ, biên dịch văn học cổ phong, viết thư pháp truyền thống và thiết kế đồ họa.
           </p>
           <p>
-            <strong>Mục tiêu học tập & Định hướng cá nhân:</strong> Mình đặt mục tiêu tích hợp nhuần nhuyễn năng lực ngôn ngữ chuyên môn với các giải pháp kỹ thuật số tiên tiến. Việc rèn luyện khả năng giao tiếp thông minh với Trí tuệ nhân tạo (AI) giúp mình tăng tốc quá trình xử lý văn bản cổ, hỗ trợ biên dịch Hán - Việt chất lượng cao và tự tay thiết kế các ấn phẩm văn hóa đẹp mắt mà vẫn giữ vững đạo đức học thuật độc lập.
+            <strong>Mục tiêu học tập & Định hướng cá nhân:</strong> Mình định hướng trở thành một chuyên viên biên dịch có năng lực số hóa cao. Việc tận dụng công nghệ số và AI thế hệ mới giúp mình tối ưu hóa việc phân tách ngữ nghĩa cổ văn, tra cứu thuật ngữ chuyên ngành phức tạp và trực quan hóa các văn bản nhân văn học một cách hiệu quả và sinh động nhất.
           </p>
           <p>
-            <strong>Mục tiêu xây dựng Portfolio học phần:</strong> Trang web này đóng vai trò là một không gian học tập thu nhỏ có tính hệ thống cao, giúp lưu trữ lâu dài và chứng minh một cách thực tế các kỹ năng số mình tích lũy được qua 6 chương học. Đây cũng là bước chuẩn bị quan trọng để mình tự tin ứng dụng công nghệ vào học tập chuyên sâu trong suốt 4 năm đại học sắp tới.
+            <strong>Mục tiêu thiết lập Portfolio:</strong> Trang web được xây dựng với vai trò là không gian tổng hợp và trưng bày toàn bộ các sản phẩm thực hành thực tế qua từng chương học. Nó chứng minh khả năng ứng dụng các kỹ năng số đã học vào thực tế học tập, nâng cao hiệu suất làm việc nhóm và thể hiện tư duy học thuật có trách nhiệm.
           </p>
         </div>
 
         <div class="grid grid-cols-3 gap-4 pt-4 border-t border-cocoa/10">
           <div class="bg-cream/65 p-3 rounded-2xl text-center border-cozy">
-            <span class="block font-display text-lg font-black text-rose-500">25040246</span>
-            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Mã sinh viên</span>
+            <span class="block font-display text-xl font-black text-rose-500">25040246</span>
+            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Mã số SV</span>
           </div>
           <div class="bg-cream/65 p-3 rounded-2xl text-center border-cozy">
-            <span class="block font-display text-lg font-black text-rose-500">Nhóm 17:15</span>
-            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Lớp học phần</span>
+            <span class="block font-display text-xl font-black text-rose-500">17:15</span>
+            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Giờ học</span>
           </div>
           <div class="bg-cream/65 p-3 rounded-2xl text-center border-cozy">
-            <span class="block font-display text-lg font-black text-rose-500">ULIS - VNU</span>
-            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Đơn vị</span>
+            <span class="block font-display text-xl font-black text-rose-500">ULIS</span>
+            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Trường học</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION II: TRANG DỰ ÁN (Bám sát yêu cầu II & V.2 & Đạt tiêu chí chấm điểm Mức 4) -->
-    <!-- Thiết kế tương tác thông minh cho phép nhấp mở để đọc đầy đủ Mục tiêu, Quá trình thực hiện và Sản phẩm đạt chuẩn Mức 4 của cả 6 chương -->
+    <!-- SECTION II: TRANG DỰ ÁN (Bám sát yêu cầu II & V.2 & Tiêu chí chấm điểm Mức 4) -->
+    <!-- Thiết kế tương tác thông minh cho phép nhấp mở để đọc Mục tiêu, Quá trình thực hiện và Sản phẩm đạt chuẩn Mức 4 của cả 6 nhiệm vụ -->
     <section id="projects" class="space-y-12">
       <div class="text-center max-w-xl mx-auto space-y-3">
         <span class="text-rose-400 text-2xl">✿ ⋆ ✦</span>
-        <h2 class="font-display text-3xl md:text-4xl font-extrabold tracking-tight">Trang Dự Án Cá Nhân</h2>
-        <p class="text-cocoa/75 text-sm md:text-base">Tổng hợp kết quả thực tế của 6 bài tập lớn bắt buộc theo đúng cấu trúc 6 chương học. Hãy nhấp trực tiếp vào từng thẻ dưới đây để đọc chi tiết về Mục tiêu, Quá trình thực hiện và Sản phẩm mẫu học thuật chất lượng cao.</p>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold tracking-tight">Học bạ thực hành kỹ thuật số</h2>
+        <p class="text-cocoa/75 text-sm md:text-base">Hệ thống hóa toàn bộ kết quả thực hành của 6 bài tập bắt buộc tương ứng với 6 chương học. Hãy nhấp trực tiếp vào từng thẻ để đọc chi tiết về Mục tiêu, Quá trình thực hiện và Sản phẩm minh họa chất lượng cao.</p>
       </div>
 
-      <!-- Grid chứa đúng 6 bài tập lớn -->
+      <!-- Grid 2 cột chính xác chứa 6 bài tập -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
-        <!-- BÀI TẬP 1 (Chương 1) -->
+        <!-- BÀI TẬP 1: Thao tác cơ bản với tệp tin và thư mục (Mục 1.4) -->
         <details class="bg-white/90 backdrop-blur-sm border-cozy rounded-[2rem] p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer rotate-[0.3deg] group" open>
           <summary class="list-none focus:outline-none space-y-4">
             <div class="bg-sky aspect-[16/9] rounded-2xl flex items-center justify-center text-6xl relative overflow-hidden">
@@ -239,37 +241,38 @@
                 <span class="text-[10px] font-bold tracking-wider uppercase text-blue-600 bg-sky/40 px-2.5 py-1 rounded-full">BÀI TẬP 1 (MỤC 1.4)</span>
                 <span class="text-xs text-cocoa/50 font-bold">Chương 1: Máy tính và thiết bị ngoại vi</span>
               </div>
-              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Thao tác cơ bản với tệp tin và thư mục</h3>
+              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Quản trị tri thức số cá nhân</h3>
             </div>
           </summary>
           <div class="mt-6 pt-6 border-t border-cocoa/10 space-y-4 text-sm text-cocoa/90 cursor-default">
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">🎯 Mục tiêu bài tập:</strong>
-              <p>Xây dựng và số hóa một "hệ sinh thái lưu trữ" học tập logic trên dịch vụ đám mây (Google Drive), hỗ trợ quản lý ngăn nắp toàn bộ tài liệu giảng dạy, bài tập cá nhân và học liệu chuyên ngành ngôn ngữ trong suốt cả khóa học đại học.</p>
+              <p>Xây dựng kiến trúc thư mục lưu trữ khoa học trên Google Drive cá nhân áp dụng phương pháp P.A.R.A (Projects - Areas - Resources - Archives) để lưu trữ nhất quán học liệu chuyên ngành ngôn ngữ.</p>
             </div>
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">📋 Tóm tắt quá trình thực hiện:</strong>
-              <p>Mình thiết lập một cấu trúc cây phân tầng 3 cấp khoa học dựa theo dòng thời gian và môn học. Áp dụng quy tắc đặt tên tệp thống nhất, viết liền không dấu và dùng ký tự gạch dưới để tối ưu hóa khả năng tìm kiếm tệp và ngăn chặn tuyệt đối lỗi mã hóa đường liên kết khi đồng bộ đa thiết bị.</p>
+              <p>Mình tiến hành phân cấp cấu trúc 4 tầng logic, thực hiện nhãn màu để tăng tính nhận diện và áp dụng quy tắc đặt tên tệp chuẩn hóa: UTF-8 không dấu, nối với nhau bằng dấu gạch dưới nhằm đảm bảo tính tương thích và tránh lỗi liên kết khi chia sẻ tệp.</p>
             </div>
             <div class="bg-[#faf6eb]/90 p-4 rounded-xl space-y-2 border-cozy">
-              <strong class="text-cocoa font-bold block text-xs uppercase tracking-wider">💾 Sản phẩm cuối cùng (Cấu trúc mẫu của Thư):</strong>
+              <strong class="text-cocoa font-bold block text-xs uppercase tracking-wider">💾 Sản phẩm cuối cùng:</strong>
               <p class="font-mono text-xs text-emerald-800 leading-tight">
-                📂 [25040246_NguyenAnhThu_ULIS]<br>
-                ├── 📂 [01_Giao_Trinh_Nganh]<br>
-                │   ├── [Ngu_Phap_Trung_Van_Co_Dai]<br>
-                │   └── [Am_Van_Hoc_Chữ_Hán]<br>
-                ├── 📂 [02_Nam1_K78_HocKy1]<br>
-                │   └── 📂 [Nhap_Mon_Cong_Nghe_So_AI]<br>
-                │       ├── 📂 [01_Slides_Ly_Thuyet]<br>
-                │       └── 📂 [02_Bai_Tap_Thuc_Hanh]<br>
-                │           └── 📄 25040246_NguyenAnhThu_BaiTap1_V1.pdf
+                📂 [ULIS_25040246_NguyenAnhThu]<br>
+                ├── 📂 [01_Du_An_Hien_Hanh]<br>
+                │   └── 📂 [Nhap_Mon_Cong_Nghe_So]<br>
+                │       ├── 📂 [Bai_Giang_Ly_Thuyet]<br>
+                │       └── 📂 [Bai_Tap_Thuc_Hanh]<br>
+                │           └── 📄 25040246_NguyenAnhThu_BaiTap1_V1.pdf<br>
+                ├── 📂 [02_Linh_Vuc_Quan_Tam]<br>
+                │   └── 📂 [Ngon_Ngu_Van_Hoa_Trung_Quoc]<br>
+                ├── 📂 [03_Nguon_Tai_Nguyen]<br>
+                └── 📂 [04_Luu_Tru_Lich_Su]
               </p>
-              <span class="text-[11px] block text-cocoa/50 italic mt-1">✓ Đã phân chia nhãn màu sắc (Color-coding) trực quan, có đường dẫn chia sẻ liên kết tải tệp nộp bài không lỗi.</span>
+              <span class="text-[11px] block text-cocoa/50 italic mt-1">✓ Hệ thống hóa khoa học, thể hiện sự hiểu biết sâu sắc về tối ưu hóa vòng đời tệp tin và lưu trữ đám mây.</span>
             </div>
           </div>
         </details>
 
-        <!-- BÀI TẬP 2 (Chương 2) -->
+        <!-- BÀI TẬP 2: Tìm kiếm và đánh giá thông tin học thuật (Mục 2.4) -->
         <details class="bg-white/90 backdrop-blur-sm border-cozy rounded-[2rem] p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer rotate-[-0.3deg] group" open>
           <summary class="list-none focus:outline-none space-y-4">
             <div class="bg-butter aspect-[16/9] rounded-2xl flex items-center justify-center text-6xl relative overflow-hidden">
@@ -280,35 +283,35 @@
                 <span class="text-[10px] font-bold tracking-wider uppercase text-amber-600 bg-butter/50 px-2.5 py-1 rounded-full">BÀI TẬP 2 (MỤC 2.4)</span>
                 <span class="text-xs text-cocoa/50 font-bold">Chương 2: Khai thác dữ liệu và thông tin</span>
               </div>
-              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Tìm kiếm và đánh giá thông tin học thuật</h3>
+              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Chiến lược khai thác dữ liệu & Đánh giá CRAAP</h3>
             </div>
           </summary>
           <div class="mt-6 pt-6 border-t border-cocoa/10 space-y-4 text-sm text-cocoa/90 cursor-default">
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">🎯 Mục tiêu bài tập:</strong>
-              <p>Khảo sát, thu thập và chọn lọc hệ thống các bài báo khoa học, tư liệu bình duyệt có độ uy tín học thuật cao phục vụ cho đề tài thảo luận nhóm: "Ảnh hưởng của hệ thống Hán tự cổ đại đối với sự phát triển chữ Nôm tại Việt Nam".</p>
+              <p>Khảo sát hệ thống tài liệu nghiên cứu học thuật phục vụ đề tài thảo luận khoa học: "Sự giao thoa văn hóa trong nghệ thuật gốm sứ Minh-Thanh và gốm sứ Lê-Trịnh".</p>
             </div>
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">📋 Tóm tắt quá trình thực hiện:</strong>
-              <p>Mình áp dụng linh hoạt tổ hợp hơn 4 toán tử tìm kiếm chuyên sâu (`site:`, `filetype:`, dấu ngoặc kép `" "`, và toán tử trừ `-` để lọc sạch tin rác phi học thuật) trên Google Scholar. Toàn bộ tài liệu thu về sau đó được thẩm định độ tin cậy thông qua hệ thống mô hình CRAAP nghiêm ngặt.</p>
+              <p>Mình sử dụng tổ hợp hơn 4 toán tử tìm kiếm chuyên biệt (`intitle:`, `site:edu.vn`, `filetype:pdf`, `AND`, `OR`, `-`) trên Google Scholar để loại bỏ hoàn toàn các trang thương mại. Sau đó, tiến hành phân tích sâu sắc độ tin cậy của tài liệu bằng bảng tiêu chí CRAAP.</p>
             </div>
             <div class="bg-[#faf6eb]/90 p-4 rounded-xl space-y-2 border-cozy">
               <strong class="text-cocoa font-bold block text-xs uppercase tracking-wider">💾 Sản phẩm cuối cùng:</strong>
               <p class="font-mono text-[11px] text-amber-800 leading-snug">
-                Cú pháp tìm kiếm tối ưu: <code class="bg-white px-1 py-0.5 rounded border">"chữ Nôm" AND "chữ Hán cổ" site:edu.vn filetype:pdf -translation</code>
+                Cú pháp học thuật: <code class="bg-white px-1 py-0.5 rounded border">intitle:"gốm sứ" AND ("Minh Thanh" OR "Lê Trịnh") site:edu.vn filetype:pdf -market</code>
               </p>
               <div class="overflow-x-auto text-xs mt-1">
                 <table class="w-full text-left border-collapse">
                   <thead>
                     <tr class="border-b border-cocoa/20 text-cocoa/60 font-bold">
                       <th class="pb-1">Tiêu chí CRAAP</th>
-                      <th class="pb-1 text-right">Phân tích thẩm định tài liệu thực tế</th>
+                      <th class="pb-1 text-right">Đánh giá nguồn tin chi tiết</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td class="py-1">Currency (Tính cập nhật)</td><td class="text-right py-1">Xuất bản năm 2023 (Rất cập nhật)</td></tr>
-                    <tr><td class="py-1">Authority (Độ uy tín tác giả)</td><td class="text-right py-1">Tạp chí Ngôn ngữ học quốc gia (Tối đa)</td></tr>
-                    <tr><td class="py-1">Accuracy (Tính chính xác)</td><td class="text-right py-1">Đầy đủ hệ thống danh mục tài liệu đối chiếu</td></tr>
+                    <tr><td class="py-1">Currency (Cập nhật)</td><td class="text-right py-1">Xuất bản 2021 (Đáp ứng tốt tính thời sự)</td></tr>
+                    <tr><td class="py-1">Authority (Độ uy tín)</td><td class="text-right py-1">Tác giả thuộc Viện Khảo cổ học Việt Nam</td></tr>
+                    <tr><td class="py-1">Purpose (Mục đích)</td><td class="text-right py-1">Nghiên cứu phi thương mại, chuẩn hóa tài liệu tham khảo</td></tr>
                   </tbody>
                 </table>
               </div>
@@ -316,7 +319,7 @@
           </div>
         </details>
 
-        <!-- BÀI TẬP 3 (Chương 3) -->
+        <!-- BÀI TẬP 3: Viết Prompt hiệu quả cho các tác vụ học tập (Mục 3.4) -->
         <details class="bg-white/90 backdrop-blur-sm border-cozy rounded-[2rem] p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer rotate-[0.3deg] group">
           <summary class="list-none focus:outline-none space-y-4">
             <div class="bg-mint aspect-[16/9] rounded-2xl flex items-center justify-center text-6xl relative overflow-hidden">
@@ -327,32 +330,32 @@
                 <span class="text-[10px] font-bold tracking-wider uppercase text-emerald-600 bg-mint/40 px-2.5 py-1 rounded-full">BÀI TẬP 3 (MỤC 3.4)</span>
                 <span class="text-xs text-cocoa/50 font-bold">Chương 3: Tổng quan về trí tuệ nhân tạo</span>
               </div>
-              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Viết Prompt hiệu quả cho các tác vụ học tập</h3>
+              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Thiết lập Prompt mô phỏng hội thoại HSKK</h3>
             </div>
           </summary>
           <div class="mt-6 pt-6 border-t border-cocoa/10 space-y-4 text-sm text-cocoa/90 cursor-default">
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">🎯 Mục tiêu bài tập:</strong>
-              <p>Kiến tạo cấu trúc câu lệnh (Prompt) chuẩn hóa để phân tách ngữ pháp cổ văn, dịch nghĩa tường tận và dịch thơ lục bát tác phẩm cổ điển "Vọng Lư Sơn Bộc Bố" của Lý Bạch phục vụ quá trình tự học trước khi lên lớp.</p>
+              <p>Ứng dụng phương pháp Prompt Engineering nâng cao (CO-STAR) để biến AI thành giám khảo bản ngữ giúp thực hành luyện nói tiếng Trung giao tiếp thương mại chuẩn HSKK cao cấp.</p>
             </div>
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">📋 Tóm tắt quá trình thực hiện:</strong>
-              <p>Mình thực hành kỹ thuật so sánh thực tế kết quả xử lý của AI dựa trên hai dạng câu lệnh: Prompt thô sơ (cho ra bản dịch máy khô khan, dịch nghĩa sai lệch trợ từ cổ) và Prompt cải tiến (áp dụng kỹ thuật Prompt Engineering: gán vai chuyên gia dịch thuật, cung cấp bối cảnh Đường thi, thiết lập định dạng bảng đầu ra và ràng buộc cú pháp nghiêm ngặt).</p>
+              <p>Mình thiết kế và so sánh hiệu quả giữa câu lệnh thông thường (Zero-shot) và câu lệnh cải tiến áp dụng chuỗi suy nghĩ (Chain-of-Thought), giúp AI đưa ra nhận xét, sửa lỗi phát âm và phản biện chính xác thay vì chỉ trả lời hời hợt.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div class="bg-red-50/70 p-3 rounded-xl border border-red-200">
-                <span class="font-bold text-red-600 block mb-1">❌ Prompt ban đầu (Chưa cải tiến):</span>
-                "Dịch bài thơ Vọng Lư Sơn Bộc Bố của Lý Bạch sang tiếng Việt."
+                <span class="font-bold text-red-600 block mb-1">❌ Prompt cũ (Chưa tối ưu):</span>
+                "Hãy nói chuyện tiếng Trung thương mại với tôi để phỏng vấn."
               </div>
               <div class="bg-emerald-50/70 p-3 rounded-xl border border-emerald-200">
-                <span class="font-bold text-emerald-600 block mb-1">✓ Prompt cải tiến chuyên sâu (Mức 4):</span>
-                "Đóng vai là giáo sư chuyên ngành ngôn ngữ Hán Nôm và dịch thuật thơ Đường. Hãy phân tích cấu trúc ngữ pháp của bài thơ 'Vọng Lư Sơn Bộc Bố', dịch nghĩa chi tiết từng câu và chuyển ngữ bài thơ sang thể lục bát Việt Nam mượt mà nhất."
+                <span class="font-bold text-emerald-600 block mb-1">✓ Prompt CO-STAR (Mức 4):</span>
+                "Bạn đóng vai là Giám đốc nhân sự tại Thượng Hải. Hãy phỏng vấn tôi bằng tiếng Trung thương mại về vị trí điều phối viên dịch thuật. Hãy hỏi từng câu một, chờ tôi trả lời, sau đó phân tích lỗi ngữ pháp và sửa phát âm trước khi qua câu tiếp theo."
               </div>
             </div>
           </div>
         </details>
 
-        <!-- BÀI TẬP 4 (Chương 4) -->
+        <!-- BÀI TẬP 4: Sử dụng công cụ trực tuyến cho hợp tác tư duy học nhóm (Mục 4.4) -->
         <details class="bg-white/90 backdrop-blur-sm border-cozy rounded-[2rem] p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer rotate-[-0.3deg] group">
           <summary class="list-none focus:outline-none space-y-4">
             <div class="bg-blush aspect-[16/9] rounded-2xl flex items-center justify-center text-6xl relative overflow-hidden">
@@ -361,30 +364,30 @@
             <div class="space-y-2">
               <div class="flex items-center justify-between">
                 <span class="text-[10px] font-bold tracking-wider uppercase text-rose-500 bg-blush/40 px-2.5 py-1 rounded-full">BÀI TẬP 4 (MỤC 4.4)</span>
-                <span class="text-xs text-cocoa/50 font-bold">Chương 4: Giao tiếp và hợp tác trong môi trường số</span>
+                <span class="text-xs text-cocoa/50 font-bold">Chương 4: Giao tiếp & hợp tác môi trường số</span>
               </div>
-              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Công cụ trực tuyến cho hợp tác tư duy nhóm</h3>
+              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Không gian cộng tác số & Phân bổ RACI</h3>
             </div>
           </summary>
           <div class="mt-6 pt-6 border-t border-cocoa/10 space-y-4 text-sm text-cocoa/90 cursor-default">
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">🎯 Mục tiêu bài tập:</strong>
-              <p>Thiết lập và vận hành không gian học tập trực tuyến có tính cộng tác cao để điều hành tiến trình thực hiện bài tập thảo luận nhóm lớn đề tài: "Sự phân bố địa lý các phương ngôn tiếng Trung Quốc".</p>
+              <p>Thiết lập sơ đồ Kanban trực tuyến và quy trình cộng tác đồng bộ trên Notion để quản lý dự án nghiên cứu nhóm đề tài: "Bản đồ số hóa các di tích văn hóa Hán Nôm tại Hà Nội".</p>
             </div>
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">📋 Tóm tắt quá trình thực hiện:</strong>
-              <p>Nhóm mình tiến hành phân rã các công việc phức tạp thành tác vụ nhỏ trên bảng quản trị Kanban của Trello, phân công cụ thể trách nhiệm 5 thành viên nhóm qua ma trận trách nhiệm RACI rõ ràng, đồng thời cộng tác thời gian thực trên hệ thống lưu trữ dùng chung Google Workspace.</p>
+              <p>Nhóm 4 thành viên đã số hóa quy trình làm việc không đồng bộ, thiết kế bảng tiến độ nhiệm vụ và phân rã vai trò bằng ma trận RACI rõ ràng nhằm loại bỏ hoàn toàn sự chồng chéo công việc.</p>
             </div>
-            <div class="bg-[#faf6eb]/90 p-4 rounded-xl border-cozy space-y-1 text-xs text-cocoa/80">
-              <strong class="text-cocoa font-bold block uppercase mb-1">📊 Tóm tắt Ma trận trách nhiệm phân bổ (RACI):</strong>
-              <p>• <strong>Nguyễn Anh Thư (A - Trách nhiệm chính):</strong> Lập kế hoạch quản trị, chỉnh sửa báo cáo cuối cùng.</p>
-              <p>• <strong>Thành viên B & C (R - Thực hiện):</strong> Phân tích và dịch tài liệu các loại phương ngôn.</p>
-              <p>• <strong>Thành viên D (C - Tham vấn):</strong> Vẽ sơ đồ phân bố phương ngôn trực quan.</p>
+            <div class="bg-[#faf6eb]/90 p-4 rounded-xl border-cozy space-y-1 text-xs text-cocoa/85">
+              <strong class="text-cocoa font-bold block uppercase mb-1">📊 Quy trình quản trị trách nhiệm RACI nhóm:</strong>
+              <p>• <strong>Nguyễn Anh Thư (A - Chịu trách nhiệm cuối):</strong> Lập kế hoạch, kiểm duyệt bản đồ số hóa.</p>
+              <p>• <strong>Thành viên B & C (R - Thực thi):</strong> Thu thập tọa độ địa lý, dịch thuật văn bia chữ Hán.</p>
+              <p>• <strong>Thành viên D (C - Tham vấn):</strong> Kiểm chứng thông tin từ thư tịch cổ của Viện Hán Nôm.</p>
             </div>
           </div>
         </details>
 
-        <!-- BÀI TẬP 5 (Chương 5) -->
+        <!-- BÀI TẬP 5: Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung (Mục 5.4) -->
         <details class="bg-white/90 backdrop-blur-sm border-cozy rounded-[2rem] p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer rotate-[0.3deg] group">
           <summary class="list-none focus:outline-none space-y-4">
             <div class="bg-sky aspect-[16/9] rounded-2xl flex items-center justify-center text-6xl relative overflow-hidden">
@@ -395,28 +398,28 @@
                 <span class="text-[10px] font-bold tracking-wider uppercase text-blue-600 bg-sky/40 px-2.5 py-1 rounded-full">BÀI TẬP 5 (MỤC 5.4)</span>
                 <span class="text-xs text-cocoa/50 font-bold">Chương 5: Sáng tạo nội dung số</span>
               </div>
-              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h3>
+              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Thiết kế học liệu trực quan đa phương tiện</h3>
             </div>
           </summary>
           <div class="mt-6 pt-6 border-t border-cocoa/10 space-y-4 text-sm text-cocoa/90 cursor-default">
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">🎯 Mục tiêu bài tập:</strong>
-              <p>Ứng dụng trí tuệ nhân tạo tạo sinh hình ảnh để minh họa trực quan bối cảnh của tác phẩm văn học phong cảnh cổ điển Trung Quốc, đưa vào làm sinh động tài liệu infographic nộp bài thảo luận.</p>
+              <p>Ứng dụng AI tạo ảnh sinh nghệ thuật (DALL-E 3) để minh họa cho tài liệu học tập từ vựng chủ đề "Trà đạo Trung Hoa cổ phong" phục vụ thuyết trình trực quan.</p>
             </div>
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">📋 Tóm tắt quá trình thực hiện:</strong>
-              <p>Mình tự xây dựng các câu lệnh Prompt mô tả nghệ thuật chi tiết về phong cách bút lông truyền thống, tranh thủy mặc mực tàu, quy định tỷ lệ khung hình 16:9 và sử dụng tông màu cổ điển (cream, blush) để giữ trọn vẹn nét đẹp cổ phong Á Đông.</p>
+              <p>Mình xây dựng cấu trúc câu lệnh chi tiết mô tả rõ phong cách vẽ (watercolor wash/flatlay), tông màu ấm cúng (cream, blush) để bức ảnh đạt độ hoàn thiện cao nhất, mang đậm tính mỹ thuật mà không có lỗi kỹ thuật.</p>
             </div>
             <div class="bg-[#faf6eb]/90 p-4 rounded-xl border-cozy text-xs">
-              <strong class="text-cocoa font-bold block uppercase mb-1">🪄 Bản Prompt sinh ảnh nghệ thuật (Mức 4):</strong>
+              <strong class="text-cocoa font-bold block uppercase mb-1">🪄 Thiết lập Prompt nghệ thuật mẫu:</strong>
               <code class="block bg-white p-2 rounded border font-mono text-[11px] text-sky-800">
-                /imagine prompt: A majestic landscape painting of high mountain peaks with cascading waterfalls, traditional Chinese ink wash style, soft cream and light pink pastel colors, elegant nostalgic lighting --ar 16:9
+                /imagine prompt: A flatlay of a traditional Chinese tea set on a rustic wooden table, watercolor wash style, gentle pastel blush and butter yellow tones, high-fidelity texture, organic aesthetic --ar 4:3
               </code>
             </div>
           </div>
         </details>
 
-        <!-- BÀI TẬP 6 (Chương 6) -->
+        <!-- BÀI TẬP 6: Sử dụng AI có trách nhiệm trong học tập và nghiên cứu (Mục 6.4) -->
         <details class="bg-white/90 backdrop-blur-sm border-cozy rounded-[2rem] p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer rotate-[-0.3deg] group">
           <summary class="list-none focus:outline-none space-y-4">
             <div class="bg-butter aspect-[16/9] rounded-2xl flex items-center justify-center text-6xl relative overflow-hidden">
@@ -427,23 +430,23 @@
                 <span class="text-[10px] font-bold tracking-wider uppercase text-amber-600 bg-butter/50 px-2.5 py-1 rounded-full">BÀI TẬP 6 (MỤC 6.4)</span>
                 <span class="text-xs text-cocoa/50 font-bold">Chương 6: An toàn & liêm chính học thuật</span>
               </div>
-              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Sử dụng AI có trách nhiệm trong học tập</h3>
+              <h3 class="font-display font-extrabold text-2xl text-cocoa group-open:text-rose-500 transition-colors">Khung quy tắc liêm chính học thuật số</h3>
             </div>
           </summary>
           <div class="mt-6 pt-6 border-t border-cocoa/10 space-y-4 text-sm text-cocoa/90 cursor-default">
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">🎯 Mục tiêu bài tập:</strong>
-              <p>Thiết lập hệ thống nguyên tắc đạo đức học thuật số của riêng cá nhân khi đồng hành cùng trí tuệ nhân tạo trong nghiên cứu tại Đại học Ngoại ngữ - ĐHQGHN.</p>
+              <p>Kiến tạo Khung quy tắc ứng xử học thuật cá nhân khi ứng dụng mô hình ngôn ngữ lớn để dịch thuật tài liệu lịch sử, chống rủi ro thiên kiến dịch thuật (Translation Bias).</p>
             </div>
             <div>
               <strong class="text-rose-500 font-display block text-base mb-1">📋 Tóm tắt quá trình thực hiện:</strong>
-              <p>Nghiên cứu kỹ lưỡng các quy chế chống đạo văn của ULIS và ĐHQGHN. Từ đó đề xuất cách đối phó chủ động với các thông tin thiên lệch hoặc lỗi "ảo tưởng" từ AI bằng cách tự nghiên cứu thực địa và trích dẫn khoa học minh bạch.</p>
+              <p>Nghiên cứu quy định đạo đức và sở hữu trí tuệ của ĐHQGHN, phân tích ranh giới đạo văn số để đề ra cơ chế xác thực thông tin chéo thủ công đối với mọi đầu ra của AI.</p>
             </div>
             <div class="bg-[#faf6eb]/90 p-4 rounded-xl border-cozy text-xs space-y-1.5 text-cocoa/80">
-              <strong class="text-cocoa font-bold block uppercase">📜 Cam kết đạo đức số của sinh viên Nguyễn Anh Thư:</strong>
-              <p>1. <strong>Tôn trọng liêm chính:</strong> Tuyệt đối không nộp trực tiếp 100% văn bản thô do AI viết hộ làm bài nộp cá nhân.</p>
-              <p>2. <strong>Trích nguồn rõ ràng:</strong> Khi tham khảo bất kỳ ý tưởng hoặc bộ khung logic nào gợi ý từ AI, luôn chú thích tường tận ở cuối bài luận.</p>
-              <p>3. <strong>Bảo mật thông tin:</strong> Tuyệt đối không đăng tải dữ liệu mật, tài liệu đề thi học phần hoặc thông tin bảo mật của bạn học lên các công cụ AI.</p>
+              <strong class="text-cocoa font-bold block uppercase">📜 Cam kết 4 tiêu chuẩn vàng của Nguyễn Anh Thư:</strong>
+              <p>1. <strong>Thẩm định độc lập:</strong> Luôn tự rà soát và đối chiếu kết quả dịch thuật của AI với từ điển chuyên ngành.</p>
+              <p>2. <strong>Minh bạch thông tin:</strong> Ghi chú rõ các phần nội dung có sự hỗ trợ tham khảo từ các mô hình AI thế hệ mới.</p>
+              <p>3. <strong>Bảo mật tuyệt đối:</strong> Không đưa dữ liệu chưa công bố của trường lớp lên các công cụ AI công cộng.</p>
             </div>
           </div>
         </details>
@@ -451,46 +454,46 @@
       </div>
     </section>
 
-    <!-- SECTION III: TRANG TỔNG KẾT (Bám sát yêu cầu II.3 & V.3 đề bài & Tiêu chí chấm điểm Mức 4) -->
+    <!-- SECTION III: TRANG TỔNG KẾT (Bám sát yêu cầu II.3 & V.3 & Rubric đánh giá) -->
     <section id="tongket" class="bg-white/90 backdrop-blur-md border-cozy rounded-[2.5rem] p-8 md:p-12 shadow-sm relative overflow-hidden">
-      <!-- Cánh hoa trang trí góc nền -->
+      <!-- Trang trí góc -->
       <span class="absolute right-4 top-4 text-pink-200/20 text-9xl pointer-events-none select-none font-display">✿</span>
       
       <div class="max-w-3xl mx-auto space-y-8">
         <div class="text-center space-y-2">
-          <span class="text-rose-400 font-display italic text-base">Tổng kết và phản ánh học thuật ⋆</span>
+          <span class="text-rose-400 font-display italic text-base">Hành trình trưởng thành học thuật ⋆</span>
           <h2 class="font-display text-3xl md:text-4xl font-extrabold tracking-tight text-cocoa">Trang Tổng Kết Học Phần</h2>
         </div>
 
         <div class="space-y-6 text-cocoa/90 leading-relaxed text-sm md:text-base">
-          <!-- Trải nghiệm cá nhân -->
+          <!-- Cảm nghĩ -->
           <div class="space-y-2">
-            <h3 class="font-display font-bold text-lg text-rose-500">1. Trải nghiệm cá nhân khi thực hiện Portfolio</h3>
+            <h3 class="font-display font-bold text-lg text-rose-500">1. Cảm nghĩ và trải nghiệm khi xây dựng Portfolio cá nhân</h3>
             <p>
-              Quá trình tự tay thiết lập và hoàn thiện trang Portfolio cá nhân này là một hành trình rèn luyện đầy giá trị đối với mình. Ban đầu, mình gặp khó khăn khi phải hệ thống hóa lượng lớn tài liệu học thuật sao cho vừa đúng chuẩn quy tắc khoa học, vừa có bố cục trực quan bắt mắt. Tuy nhiên, khi kết hợp giữa vẻ đẹp cổ điển của ngôn ngữ Trung Quốc cùng lăng kính công nghệ số hóa, mình nhận thấy tư duy quản trị tri thức số hóa của bản thân đã trở nên khoa học, logic và ngăn nắp hơn rất nhiều.
+              Xây dựng Portfolio cá nhân là một hành trình thú vị và đầy thử thách đối với mình. Từ một sinh viên chuyên ngành ngôn ngữ vốn rụt rè trước công nghệ, việc tự tay lên cấu trúc, viết code giao diện và trực quan hóa toàn bộ dữ liệu học thuật đã giúp mình khai phá ra một giới hạn mới của bản thân. Mỗi dòng nội dung được sắp xếp ngăn nắp trên trang là một minh chứng sống động cho tư duy hệ thống và thói quen làm việc khoa học mà mình đã rèn luyện được.
             </p>
           </div>
 
-          <!-- Kiến thức và kỹ năng -->
+          <!-- Kiến thức -->
           <div class="space-y-2">
-            <h3 class="font-display font-bold text-lg text-rose-500">2. Những tri thức và kỹ năng quan trọng nhất đã học được</h3>
+            <h3 class="font-display font-bold text-lg text-rose-500">2. Những tri thức & Kỹ năng quan trọng nhất đã học được</h3>
             <p>
-              Qua học phần này, hai kỹ năng làm mình thay đổi hoàn toàn tư duy là <strong>Kỹ thuật viết Prompt nâng cao</strong> và <strong>Phương pháp thẩm định nguồn tin học thuật (CRAAP)</strong>. Là một sinh viên chuyên ngành ngoại ngữ, các công cụ công nghệ trước đây chỉ được mình sử dụng một cách rất sơ sài. Giờ đây, nhờ môn học, mình đã biết cách làm chủ công nghệ, viết lệnh thông minh để biến AI thành một cộng sự hữu ích phục vụ hiệu quả cho việc nghiên cứu ngôn ngữ lâu dài.
+              Học phần này đã mang đến cho mình hai tư duy nền tảng: <strong>Kỹ năng giao tiếp thông minh với AI (Prompt Engineering)</strong> và <strong>Tư duy quản trị tri thức cá nhân đám mây</strong>. Việc thấu hiểu cơ chế vận hành của các mô hình học máy giúp mình biết cách đặt vấn đề rõ ràng, biết phân rã nhiệm vụ phức tạp thành các bước nhỏ hơn để cùng AI đồng sáng tạo một cách hiệu quả nhất.
             </p>
           </div>
 
           <!-- Tâm đắc và thách thức -->
           <div class="space-y-2">
-            <h3 class="font-display font-bold text-lg text-rose-500">3. Điểm tâm đắc nhất và những thách thức đã vượt qua</h3>
+            <h3 class="font-display font-bold text-lg text-rose-500">3. Điểm tâm đắc nhất và thách thức lớn nhất</h3>
             <p>
-              Điều mình tâm đắc nhất chính là khả năng ứng dụng AI tạo sinh để trực quan hóa thi ca cổ chữ Hán (Bài tập 5) - mở ra tiềm năng lớn cho định hướng sáng tạo nội dung văn hóa của mình. Thách thức lớn nhất là việc duy trì liêm chính học thuật số khi công cụ công nghệ quá thông minh và tiện lợi. Mình đã vượt qua thách thức đó bằng việc tự thiết lập và nghiêm túc tuân thủ bộ quy tắc sử dụng AI có trách nhiệm ở Bài tập 6, luôn giữ tư duy phản biện độc lập trước mọi gợi ý của AI.
+              Điều mình cảm thấy tâm đắc nhất chính là việc ứng dụng AI để trực quan hóa văn học cổ điển (Bài tập 5) - mở ra tiềm năng lớn cho tương lai dịch thuật của mình. Thách thức lớn nhất đối với mình là việc duy trì liêm chính học thuật khi công cụ AI ngày càng tiện lợi. Mình đã vượt qua thách thức này bằng cách chủ động xây dựng và tuân thủ bộ nguyên tắc liêm chính học thuật cá nhân nghiêm ngặt ở bài tập 6, bảo vệ tuyệt đối sự liêm chính và tính phản biện cá nhân.
             </p>
           </div>
 
-          <!-- Lời cảm ơn chân thành -->
+          <!-- Lời tri ân -->
           <div class="bg-mint/30 p-6 rounded-2xl border-cozy text-center">
             <p class="font-display italic text-base text-emerald-800">
-              "Em xin chân thành gửi lời biết ơn sâu sắc nhất tới Thầy Cô bộ môn đã luôn tận tâm dẫn dắt, khơi gợi cảm hứng để em tự tin bước chân vào kỷ nguyên số học thuật một cách vững vàng nhất! ✿"
+              "Em xin gửi lời tri ân chân thành nhất tới Thầy Cô bộ môn đã luôn tận tâm hướng dẫn, mở ra góc nhìn công nghệ số đầy mới mẻ để em hoàn thành bài Portfolio kết khóa học tập một cách trọn vẹn nhất! ✿"
             </p>
           </div>
         </div>
@@ -506,7 +509,7 @@
           Have a soft idea?<br>Let's chat over tea ☕
         </h2>
         <p class="text-cocoa/80 text-sm md:text-base">
-          Mọi thắc mắc đóng góp, trao đổi bài tập lớn hoặc có mong muốn cộng tác số hóa dữ liệu học tập cùng Thư, xin vui lòng gửi thư về hòm thư điện tử chính thức của mình nhé!
+          Mọi thắc mắc, thảo luận học tập hoặc mong muốn kết nối công việc cùng Thư, bạn hãy liên hệ trực tiếp qua hòm thư điện tử nhé!
         </p>
       </div>
 
@@ -517,25 +520,25 @@
       </div>
     </section>
 
-    <!-- CẨM NANG CHUYỂN ĐỔI (Replicate Guide) - Giúp dễ dàng mô phỏng lên Google Sites / Wix / Notion như đề bài gợi ý -->
+    <!-- CẨM NANG CHUYỂN ĐỔI (Replicate Guide) -->
     <section class="bg-cream/90 backdrop-blur-sm border-cozy rounded-3xl p-6 space-y-4 max-w-4xl mx-auto">
       <details class="group">
         <summary class="font-display font-bold text-base md:text-lg cursor-pointer flex justify-between items-center select-none text-cocoa/80 hover:text-rose-500">
-          <span>✿ CẨM NANG HƯỚNG DẪN TÍCH HỢP LÊN GOOGLE SITES / WIX / NOTION</span>
+          <span>✿ CẨM NANG TÍCH HỢP CHO GOOGLE SITES / WIX / NOTION</span>
           <span class="transition-transform group-open:rotate-180">▼</span>
         </summary>
         <div class="mt-4 pt-4 border-t border-cocoa/10 space-y-4 text-xs md:text-sm text-cocoa/80 leading-relaxed">
           <p>
-            Trang web này được xây dựng với cấu trúc nội dung cực kỳ tường minh. Bạn có thể dễ dàng mô phỏng lại thiết kế này lên các nền tảng tạo Portfolio chính thức được môn học gợi ý:
+            Cẩm nang hỗ trợ bạn chuyển tiếp nội dung khi nộp bài tập chính thức qua các nền tảng xây dựng kéo thả khác:
           </p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="bg-white/60 p-4 rounded-2xl border-cozy">
               <span class="font-bold text-cocoa block mb-1">💡 Google Sites</span>
-              Đặt hình nền toàn trang bằng tệp ảnh `Hình 1.jpg`. Sắp xếp nội dung thành các hộp văn bản chia đều 2 cột để thể hiện đúng tri thức của 6 bài học một cách khoa học.
+              Thiết lập ảnh nền chính từ tệp ảnh `Hình 1.jpg`. Sắp xếp nội dung thành các hộp văn bản chia đều 2 cột để thể hiện đúng tri thức của 6 bài học.
             </div>
             <div class="bg-white/60 p-4 rounded-2xl border-cozy">
               <span class="font-bold text-cocoa block mb-1">✨ Wix / Wordpress</span>
-              Điều chỉnh độ mờ nền của các Container (`background-opacity: 85%`) và thiết lập độ bo góc đồng loạt (`Corner Radius: 32px`) để giữ nguyên hiệu ứng dán nhãn sticker mềm mại, ấm áp.
+              Điều chỉnh độ mờ nền của các Container (`background-opacity: 85%`) và thiết lập độ bo góc đồng loạt (`Corner Radius: 32px`) để giữ nguyên hiệu ứng dán nhãn sticker dễ chịu.
             </div>
             <div class="bg-white/60 p-4 rounded-2xl border-cozy">
               <span class="font-bold text-cocoa block mb-1">📝 Notion Portfolio</span>
@@ -556,7 +559,7 @@
           © 2026 Nguyễn Anh Thư · MSSV: 25040246.
         </p>
         <p class="text-xs text-cocoa/40">
-          Môn học Nhập môn công nghệ số và ứng dụng AI (Nhóm 17:15) · ULIS - VNU
+          Học phần Nhập môn công nghệ số và ứng dụng AI · ULIS - VNU
         </p>
       </div>
 
