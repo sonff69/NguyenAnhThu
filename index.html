@@ -34,12 +34,12 @@
   </script>
 
   <style>
-    /* Nền Hình 1.jpg sắc nét lặp lại tuần hoàn theo dạng grid wallpaper */
-    .star-wallpaper {
+    /* Lấy Hình 2.jpg duplicate thành hệ thống ô lưới (tiled grid) để làm nền */
+    .avatar-grid-wallpaper {
       background-color: #faf6eb;
-      background-image: url('./Hình 1.jpg');
+      background-image: url('./Hình 2.jpg');
       background-repeat: repeat;
-      background-size: 320px;
+      background-size: 160px; /* Điều chỉnh kích thước ô lưới lặp lại hợp lý */
       background-attachment: fixed;
     }
 
@@ -71,12 +71,16 @@
     }
   </style>
 </head>
-<body class="star-wallpaper font-body text-cocoa min-h-screen relative selection:bg-blush selection:text-cocoa">
+<body class="avatar-grid-wallpaper font-body text-cocoa min-h-screen relative selection:bg-blush selection:text-cocoa">
 
-  <!-- NAVIGATION BAR (Thanh điều hướng nổi mờ kính) -->
+  <!-- LỚP PHỦ MỜ KÍNH TOÀN TRANG (Frosted Glass Overlay) -->
+  <!-- Tạo lớp mờ kính sang trọng đè lên lưới ảnh chân dung phía dưới, bảo vệ tuyệt đối độ rõ nét của chữ -->
+  <div class="fixed inset-0 bg-[#faf6eb]/85 backdrop-blur-[6px] z-0 pointer-events-none"></div>
+
+  <!-- NAVIGATION BAR (Thanh điều hướng mờ kính) -->
   <header class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl z-50">
     <nav class="bg-[#faf6eb]/75 backdrop-blur-md border-cozy rounded-full px-4 py-3 md:px-6 flex items-center justify-between shadow-sm">
-      <!-- Logo thương hiệu cá nhân chữ thường có dấu chấm hồng -->
+      <!-- Logo cá nhân viết thường -->
       <a href="#" class="font-display font-black text-2xl tracking-tight text-rose-400 hover:text-rose-500 transition-colors">
         anh thư<span class="text-rose-500">.</span>
       </a>
@@ -90,7 +94,7 @@
         <a href="#contact" class="hover:text-rose-400 transition-colors">Liên Hệ</a>
       </div>
 
-      <!-- Nút hành động liên kết ngoài nổi bật -->
+      <!-- Nút hành động nổi bật -->
       <div>
         <a href="https://drive.google.com" target="_blank" class="bg-[#f5cbc8]/90 hover:bg-[#ea7a9a] hover:text-white text-rose-600 px-5 py-2.5 rounded-full font-bold text-xs md:text-sm tracking-wider uppercase transition-all shadow-sm">
           Xem bài tập GG Drive
@@ -102,27 +106,27 @@
   <!-- MAIN WRAPPER -->
   <main class="relative z-10 max-w-6xl mx-auto px-4 pt-32 pb-24 space-y-24">
 
-    <!-- HERO SECTION (Trang đầu giới thiệu bản thân đơn giản theo mẫu, mờ kính cục bộ) -->
+    <!-- HERO SECTION (Trang giới thiệu bản thân mờ kính) -->
     <section class="min-h-[80vh] flex flex-col justify-center relative">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Cột Trái: Thông tin giới thiệu học sinh và trích dẫn -->
+        <!-- Cột Trái: Giới thiệu bản thân cá nhân hóa -->
         <div class="lg:col-span-7 space-y-6">
-          <!-- Nhãn trường Đại học màu hồng pastel mờ kính -->
-          <div class="inline-block bg-[#f5cbc8]/50 backdrop-blur-md border border-[#f5cbc8]/60 text-rose-500 font-bold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm">
+          <!-- Nhãn trường Đại học mờ kính -->
+          <div class="inline-block bg-[#f5cbc8]/55 backdrop-blur-md border border-[#f5cbc8]/60 text-rose-500 font-bold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full shadow-sm">
             Đại học Ngoại ngữ - ĐHQGHN
           </div>
 
-          <!-- Tiêu đề lớn phối hợp tên viết nghiêng hoài cổ -->
+          <!-- Tiêu đề phối tên nghiêng nghệ thuật -->
           <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-cocoa">
             Xin chào, mình là<br>
             <span class="text-rose-400 italic">Nguyễn Anh Thư</span>
           </h1>
 
-          <!-- Thẻ sinh viên tối giản song song mờ kính -->
+          <!-- Thẻ sinh viên tối giản mờ kính -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <!-- Thẻ Mã SV -->
-            <div class="bg-white/70 backdrop-blur-md border-cozy rounded-2xl p-4 flex items-center gap-3.5 shadow-sm">
+            <div class="bg-white/75 backdrop-blur-md border-cozy rounded-2xl p-4 flex items-center gap-3.5 shadow-sm">
               <div class="bg-rose-100/70 text-rose-500 rounded-xl p-2.5 w-10 h-10 flex items-center justify-center font-bold">
                 👤
               </div>
@@ -133,7 +137,7 @@
             </div>
 
             <!-- Thẻ Chuyên ngành -->
-            <div class="bg-white/70 backdrop-blur-md border-cozy rounded-2xl p-4 flex items-center gap-3.5 shadow-sm">
+            <div class="bg-white/75 backdrop-blur-md border-cozy rounded-2xl p-4 flex items-center gap-3.5 shadow-sm">
               <div class="bg-sky-100/70 text-sky-500 rounded-xl p-2.5 w-10 h-10 flex items-center justify-center font-bold">
                 📖
               </div>
@@ -144,17 +148,17 @@
             </div>
           </div>
 
-          <!-- Đoạn văn giới thiệu cá nhân hóa tự nhiên mờ kính nhẹ -->
-          <div class="bg-white/40 backdrop-blur-sm border-cozy rounded-2xl p-4 text-cocoa/80 text-sm md:text-base leading-relaxed">
+          <!-- Đoạn văn tự giới thiệu cá nhân mờ kính -->
+          <div class="bg-white/55 backdrop-blur-md border-cozy rounded-2xl p-4 text-cocoa/80 text-sm md:text-base leading-relaxed">
             Chào mừng thầy cô và các bạn ghé thăm góc học tập nhỏ của mình! Là một sinh viên chuyên ngành Ngôn ngữ và Văn hóa Trung Quốc tại ULIS, mình từng nghĩ công nghệ số là một rào cản phức tạp đối với dân ngôn ngữ. Tuy nhiên, qua quá trình học tập lớp <strong>17:15</strong> của học phần Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo, mình nhận ra công nghệ chính là bệ phóng giúp việc quản lý tư liệu, học từ vựng, rèn kỹ năng viết và tư duy học thuật trở nên trực quan, hiệu quả hơn bao giờ hết.
           </div>
 
-          <!-- Trích dẫn triết lý có vạch kẻ hồng bên trái -->
+          <!-- Trích dẫn chữ Hán có vạch kẻ hồng bên trái -->
           <div class="border-l-4 border-rose-300 pl-4 py-1 italic text-cocoa/75 text-xs md:text-sm">
             "学而时习之, 不亦说乎?" — Học đi đôi với hành, chẳng phải vui lắm sao?
           </div>
 
-          <!-- Nút hành động kép -->
+          <!-- Cặp nút hành động -->
           <div class="flex flex-wrap gap-4 pt-2">
             <a href="#projects" class="bg-[#f5cbc8]/90 hover:bg-[#ea7a9a] hover:text-white text-rose-600 px-6 py-3.5 rounded-full font-bold text-sm tracking-wide transition-all shadow-sm">
               Khám phá bài tập
@@ -165,25 +169,25 @@
           </div>
         </div>
 
-        <!-- Cột Phải: Khung ảnh Polaroid chứa Hình 2.jpg -->
+        <!-- Cột Phải: Khung ảnh Polaroid trung tâm chứa Hình 1.jpg -->
         <div class="lg:col-span-5 flex justify-center">
           <div class="relative p-6">
             <!-- Họa tiết lưới chấm đằng sau khung ảnh -->
             <div class="absolute inset-0 dot-pattern border-cozy rounded-3xl opacity-60"></div>
             
-            <!-- Khung ảnh Polaroid chứa Hình 2.jpg -->
-            <div class="relative bg-white/90 backdrop-blur-md p-4 pb-8 rounded-3xl shadow-polaroid border-cozy rotate-2 hover:rotate-0 transition-transform duration-500 w-full max-w-[320px]">
+            <!-- Khung ảnh Polaroid chứa ảnh ngôi sao của Hình 1.jpg -->
+            <div class="relative bg-white p-4 pb-8 rounded-3xl shadow-polaroid border-cozy rotate-2 hover:rotate-0 transition-transform duration-500 w-full max-w-[320px]">
               <!-- Nhãn dán trên ảnh -->
               <span class="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold tracking-wider text-rose-500 z-10 shadow-sm">
                 ULISer 🎒
               </span>
 
-              <!-- Avatar chính thức Hình 2.jpg -->
-              <div class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-tr from-[#f5cbc8] to-sky/30 border border-cocoa/10">
-                <img src="./Hình 2.jpg" alt="Nguyễn Anh Thư" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-rose-500 font-bold text-xl bg-rose-100\'>Hình 2.jpg Placeholder</div>'"/>
+              <!-- Ảnh đại diện Hình 1.jpg (Họa tiết sao vàng) -->
+              <div class="aspect-square rounded-2xl overflow-hidden border border-cocoa/10">
+                <img src="./Hình 1.jpg" alt="Nguyễn Anh Thư Wallpaper Star" class="w-full h-full object-cover" onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-rose-500 font-bold text-xl bg-rose-100\'>Hình 1.jpg Placeholder</div>'"/>
               </div>
 
-              <!-- Ghi chú bên dưới ảnh -->
+              <!-- Ghi chú dưới ảnh -->
               <div class="mt-4 text-center">
                 <span class="text-[10px] uppercase tracking-widest text-cocoa/40 font-bold block pt-2 border-t border-cocoa/10">
                   Nguyễn Anh Thư · ULIS 2026
@@ -195,7 +199,7 @@
 
       </div>
 
-      <!-- Chỉ dẫn Cuộn xuống ở đáy trang đầu -->
+      <!-- Mũi tên Cuộn xuống dưới trang đầu -->
       <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-center hidden lg:block animate-bounce">
         <a href="#intro" class="text-xs font-bold text-cocoa/40 tracking-widest uppercase hover:text-rose-400 transition-colors">
           Cuộn Xuống<br>
@@ -204,7 +208,7 @@
       </div>
     </section>
 
-    <!-- MARQUEE CHỮ CHẠY TRANG TRÍ (Skills/Marquee) -->
+    <!-- MARQUEE CHỮ CHẠY TRANG TRÍ -->
     <section id="skills" class="bg-white/80 backdrop-blur-sm border-cozy rounded-full py-4 overflow-hidden shadow-sm">
       <div class="animate-marquee whitespace-nowrap flex gap-8 items-center text-xs md:text-sm font-bold tracking-wider uppercase text-cocoa/70">
         <span>✦ Thao tác quản trị tệp tin và thư mục</span> <span>✿ Khảo sát và đánh giá thông tin khoa học</span> <span>✦ Prompt Engineering 3 cấp độ</span> <span>✿ Cộng tác làm việc nhóm</span> 
@@ -215,7 +219,7 @@
       </div>
     </section>
 
-    <!-- SECTION I: TRANG GIỚI THIỆU (Bám sát yêu cầu V.1, phủ mờ kính) -->
+    <!-- SECTION I: TRANG GIỚI THIỆU (Bám sát yêu cầu V.1) -->
     <section id="intro" class="bg-white/70 backdrop-blur-md border-cozy rounded-[2.5rem] p-8 md:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <!-- Grid icon bên trái -->
       <div class="lg:col-span-5 grid grid-cols-3 gap-4">
@@ -263,7 +267,7 @@
       </div>
     </section>
 
-    <!-- SECTION II: TRANG DỰ ÁN (Mờ kính từng thẻ dự án trên nền sao sắc nét) -->
+    <!-- SECTION II: TRANG DỰ ÁN (Bám sát 100% tài liệu thực tế của bạn) -->
     <section id="projects" class="space-y-12">
       <div class="text-center max-w-xl mx-auto space-y-3">
         <span class="text-rose-400 text-2xl">✿ ⋆ ✦</span>
@@ -397,7 +401,7 @@
                 <span class="font-bold text-rose-500 block mb-1">Tác vụ 1: Tóm tắt văn bản ("Lễ Cấp Sắc người Dao Quần Chẹt")</span>
                 <ul class="list-disc pl-4 text-xs space-y-1">
                   <li><strong>Prompt Cơ bản:</strong> "Hãy tóm tắt bài viết này." -> <span class="text-amber-600">Nội dung sơ sài, thiếu ý chính.</span></li>
-                  <li><strong>Prompt Nâng cao:</strong> "Bạn là một giảng viên đại học hướng dẫn đọc học thuật. Hãy tóm tắt trong 200-250 từ, giữ nguyên thuật ngữ, viết thêm 3 dòng nhận xét giá trị đối với sinh viên..." -> <span class="text-emerald-600">Chi tiết, logic, chất lượng tốt nhất.</span></li>
+                  <li><strong>Prompt Nâng cao:</strong> "Bạn là một giảng viên đại học hướng dẫn đọc học thuật. Hãy tóm tắt trong 200-250 từ, giữ nguyên thuật ngữ, viết thêm 3 dòng nhận xét giá trị đối với sinh viên..." -> <span class="text-emerald-600">Tóm tắt chi tiết, logic, chất lượng tốt nhất.</span></li>
                 </ul>
               </div>
               <div class="bg-cream/60 p-4 rounded-xl border border-cocoa/10">
@@ -409,7 +413,7 @@
               <div class="bg-cream/60 p-4 rounded-xl border border-cocoa/10">
                 <span class="font-bold text-rose-500 block mb-1">Tác vụ 3: Tạo bộ câu hỏi ôn tập ("Liên minh châu Âu - EU")</span>
                 <ul class="list-disc pl-4 text-xs space-y-1">
-                  <li><strong>Prompt Nâng cao:</strong> "Bạn là giảng viên môn Quan hệ quốc tế. Tạo 10 câu trắc nghiệm (4 đáp án) kèm 3 câu tự luận ngắn, đáp án và giải thích chi tiết, sắp xếp từ dễ đến khó..." -> <span class="text-emerald-600">Trình bày logic học thuật cao.</span></li>
+                  <li><strong>Prompt Nâng cao:</strong> "Bạn là giảng viên môn Quan hệ quốc tế. Hãy tạo bộ câu hỏi ôn tập về Liên minh châu Âu gồm: 10 câu trắc nghiệm (4 đáp án/câu), 3 câu tự luận ngắn, Đáp án và giải thích chi tiết..." -> <span class="text-emerald-600">Trình bày logic, đầy đủ, có so sánh trực quan, hiệu quả cao nhất.</span></li>
                 </ul>
               </div>
             </div>
@@ -417,7 +421,7 @@
         </details>
 
         <!-- BÀI TẬP 4: Sử dụng công cụ trực tuyến cho hợp tác tư duy học nhóm (Mục 4.4) -->
-        <details class="bg-white/70 backdrop-blur-md border-cozy rounded-[2rem] p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer rotate-[-0.3deg] group">
+        <details class="bg-white/70 backdrop-blur-sm border-cozy rounded-[2rem] p-6 hover:-translate-y-1 transition-all duration-300 shadow-sm cursor-pointer rotate-[-0.3deg] group">
           <summary class="list-none focus:outline-none space-y-4">
             <div class="bg-blush aspect-[16/9] rounded-2xl flex items-center justify-center text-6xl relative overflow-hidden">
               🤝 <span class="absolute right-4 bottom-4 text-[10px] font-bold bg-white/85 px-2 py-1 rounded-md text-cocoa">NHẤP ĐỂ THU GỌN / MỞ RỘNG</span>
