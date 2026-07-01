@@ -34,7 +34,7 @@
   </script>
 
   <style>
-    /* Lấy Hình 2.jpg duplicate thành hệ thống ô lưới (tiled grid) để làm nền */
+    /* Lấy Hình 2.jpg duplicate thành hệ thống ô lưới (tiled grid) để làm nền chính thức */
     .avatar-grid-wallpaper {
       background-color: #faf6eb;
       background-image: url('./Hình 2.jpg');
@@ -74,9 +74,10 @@
 <body class="avatar-grid-wallpaper font-body text-cocoa min-h-screen relative selection:bg-blush selection:text-cocoa">
 
   <!-- LỚP PHỦ MỜ KÍNH TOÀN TRANG (Frosted Glass Overlay) -->
+  <!-- Lớp phủ tạo mờ lưới ảnh chân dung phía dưới, đảm bảo tính thẩm mỹ học đường và bảo vệ độ đọc văn bản -->
   <div class="fixed inset-0 bg-[#faf6eb]/85 backdrop-blur-[6px] z-0 pointer-events-none"></div>
 
-  <!-- NAVIGATION BAR (Thanh điều hướng mờ kính) -->
+  <!-- NAVIGATION BAR (Thanh điều hướng mờ kính tối giản) -->
   <header class="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl z-50">
     <nav class="bg-[#faf6eb]/75 backdrop-blur-md border-cozy rounded-full px-4 py-3 md:px-6 flex items-center justify-between shadow-sm">
       <!-- Logo cá nhân -->
@@ -152,7 +153,7 @@
             Chào mừng thầy cô và các bạn ghé thăm góc học tập nhỏ của mình! Là một sinh viên chuyên ngành Ngôn ngữ và Văn hóa Trung Quốc tại ULIS, mình từng nghĩ công nghệ số là một rào cản phức tạp đối với dân ngôn ngữ. Tuy nhiên, qua quá trình học tập thực tế của học phần Nhập môn công nghệ số và ứng dụng trí tuệ nhân tạo, mình nhận ra công nghệ chính là bệ phóng giúp việc quản lý tư liệu, học từ vựng, rèn kỹ năng viết và tư duy học thuật trở nên trực quan, hiệu quả hơn bao giờ hết.
           </div>
 
-          <!-- Cặp nút hành động -->
+          <!-- Cặp nút hành động dẫn trực tiếp tới Drive bài tập -->
           <div class="flex flex-wrap gap-4 pt-2">
             <a href="https://drive.google.com/drive/folders/1-ndoSF_i39gt08zNJA2nlSqu0_tTzX0e" target="_blank" class="bg-[#f5cbc8]/90 hover:bg-[#ea7a9a] hover:text-white text-rose-600 px-6 py-3.5 rounded-full font-bold text-sm tracking-wide transition-all shadow-sm">
               Xem Bài Tập Google Drive
@@ -243,21 +244,6 @@
             <strong>Mục tiêu thiết lập Portfolio:</strong> Trang web được xây dựng với vai trò là không gian tổng hợp và trưng bày toàn bộ các sản phẩm thực hành thực tế qua từng chương học. Nó chứng minh khả năng ứng dụng các kỹ năng số đã học vào thực tế học tập, nâng cao hiệu suất làm việc nhóm và thể hiện tư duy học thuật có trách nhiệm.
           </p>
         </div>
-
-        <div class="grid grid-cols-3 gap-4 pt-4 border-t border-cocoa/10">
-          <div class="bg-cream/65 p-3 rounded-2xl text-center border-cozy">
-            <span class="block font-display text-xl font-black text-rose-500">25040246</span>
-            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Mã số SV</span>
-          </div>
-          <div class="bg-cream/65 p-3 rounded-2xl text-center border-cozy">
-            <span class="block font-display text-xl font-black text-rose-500">ULIS</span>
-            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Trường học</span>
-          </div>
-          <div class="bg-cream/65 p-3 rounded-2xl text-center border-cozy">
-            <span class="block font-display text-xl font-black text-rose-500">VNU</span>
-            <span class="text-[10px] text-cocoa/60 font-bold uppercase">Hệ thống</span>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -266,10 +252,10 @@
       <div class="text-center max-w-xl mx-auto space-y-3">
         <span class="text-rose-400 text-2xl">✿ ⋆ ✦</span>
         <h2 class="font-display text-3xl md:text-4xl font-extrabold tracking-tight">Học bạ thực hành kỹ thuật số</h2>
-        <p class="text-cocoa/75 text-sm md:text-base">Hệ thống hóa toàn bộ kết quả thực hành của 6 bài tập bắt buộc tương ứng với 6 chương học. Toàn bộ nội dung đã được xổ sẵn và bổ sung ảnh minh họa số hóa trực quan đính kèm.</p>
+        <p class="text-cocoa/75 text-sm md:text-base">Hệ thống hóa toàn bộ kết quả thực hành của 6 bài tập bắt buộc tương ứng với 6 chương học. Toàn bộ bài thực hành được hiển thị chi tiết và bổ sung ảnh minh họa số hóa trực quan đính kèm.</p>
       </div>
 
-      <!-- Grid 2 cột mở rộng sẵn sàng chấm điểm -->
+      <!-- Grid 2 cột mở rộng sẵn sàng xem trực tiếp -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
         <!-- BÀI TẬP 1: Thao tác cơ bản với tệp tin và thư mục (Mục 1.4) -->
@@ -297,7 +283,7 @@
             </div>
             <h3 class="font-display font-extrabold text-2xl text-cocoa">Quản lý tệp và thư mục</h3>
             <div class="text-sm text-cocoa/90 space-y-3 pt-2 border-t border-cocoa/10">
-              <p><strong>🎯 Mục tiêu bài tập:</strong> Làm quen với các thao tác quản trị tệp tin trực tiếp trên hệ thống Windows, tạo lập thư mục thực hành cá nhân ngăn nắp.</p>
+              <p><strong>🎯 Mục tiêu bài tập:</strong> Làm quen với các thao tác cơ bản trong hệ thống tệp tin và thư mục của hệ điều hành Windows, thiết lập cấu trúc lưu trữ gọn gàng phục vụ lưu giữ bài tập cá nhân.</p>
               <p><strong>📋 Tóm tắt quá trình:</strong> Mở File Explorer (<code class="bg-cream px-1 rounded border">Win + E</code>) -> Tạo thư mục <code class="bg-cream px-1 rounded border">ThucHanh_NguyenAnhThu</code> trên ổ D -> Tạo file <code class="bg-cream px-1 rounded border">GhiChu.txt</code> đổi tên thành <code class="bg-cream px-1 rounded border">GhiChuQuanTrong.txt</code> -> Tạo thư mục con <code class="bg-cream px-1 rounded border">TaiLieu</code> -> Thực hiện sao chép tệp tin -> Di chuyển tệp <code class="bg-cream px-1 rounded border">DiChuyen.txt</code> -> Thực hành xóa tệp vào Thùng rác (Recycle Bin) và khôi phục (Restore).</p>
               <div class="bg-[#faf6eb]/90 p-3 rounded-xl text-xs space-y-1">
                 <span class="font-bold text-emerald-800">✓ Kết quả đạt được:</span> 100% tệp tin được sắp xếp khoa học, khôi phục nguyên vẹn cấu trúc đường dẫn học liệu cá nhân.
@@ -463,8 +449,11 @@
             <div class="text-sm text-cocoa/90 space-y-3 pt-2 border-t border-cocoa/10">
               <p><strong>🎯 Cam kết cá nhân:</strong> Kiến tạo hệ thống nguyên tắc đạo đức và hành vi chuẩn mực khi ứng dụng Trí tuệ nhân tạo học đường.</p>
               <p><strong>📋 Tóm tắt quá trình:</strong> Phân tích chính sách AI của Trường Đại học Ngoại ngữ - ĐHQGHN; Định nghĩa ranh giới giữa hỗ trợ hợp lý (gợi ý ý tưởng, rà soát lỗi ngôn ngữ) và gian lận (đạo văn, phụ thuộc thụ động). Thiết lập bộ 7 nguyên tắc liêm chính học thuật cá nhân.</p>
-              <div class="bg-[#faf6eb]/90 p-3 rounded-xl text-xs space-y-1">
-                <span class="font-bold text-emerald-800">✓ Nguyên tắc vàng:</span> Công khai rõ sự hỗ trợ của AI trong phần cuối bài thuyết trình nhóm nhằm đảm bảo tính minh bạch tối đa.
+              <div class="bg-[#faf6eb]/90 p-3 rounded-xl border-cozy text-xs space-y-1.5 text-cocoa/80">
+                <strong class="text-cocoa font-bold block uppercase">📜 Cam kết đạo đức học thuật của Nguyễn Anh Thư:</strong>
+                <p>1. <strong>Xác thực nguồn tin:</strong> Mọi tri thức học thuật do AI cung cấp phải được đối chiếu chéo lại với giáo trình và sách báo đã xuất bản.</p>
+                <p>2. <strong>Trích nguồn minh bạch:</strong> Khi tham khảo các ý tưởng lập luận của AI, luôn bổ sung chú thích rõ ràng cuối bài báo cáo.</p>
+                <p>3. <strong>Bảo mật thông tin:</strong> Nói không với việc đưa dữ liệu cá nhân, đề thi hoặc thông tin riêng tư của giảng viên lên các công cụ AI công cộng.</p>
               </div>
             </div>
           </div>
@@ -539,35 +528,6 @@
       </div>
     </section>
 
-    <!-- CẨM NANG CHUYỂN ĐỔI (Replicate Guide) -->
-    <section class="bg-cream/90 backdrop-blur-sm border-cozy rounded-3xl p-6 space-y-4 max-w-4xl mx-auto">
-      <details class="group">
-        <summary class="font-display font-bold text-base md:text-lg cursor-pointer flex justify-between items-center select-none text-cocoa/80 hover:text-rose-500">
-          <span>✿ CẨM NANG TÍCH HỢP CHO GOOGLE SITES / WIX / NOTION</span>
-          <span class="transition-transform group-open:rotate-180">▼</span>
-        </summary>
-        <div class="mt-4 pt-4 border-t border-cocoa/10 space-y-4 text-xs md:text-sm text-cocoa/80 leading-relaxed">
-          <p>
-            Cẩm nang hỗ trợ bạn chuyển tiếp nội dung khi nộp bài tập chính thức qua các nền tảng xây dựng kéo thả khác:
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-white/60 p-4 rounded-2xl border-cozy">
-              <span class="font-bold text-cocoa block mb-1">💡 Google Sites</span>
-              Thiết lập ảnh nền chính từ tệp ảnh `Hình 1.jpg`. Sắp xếp nội dung thành các hộp văn bản chia đều 2 cột để thể hiện đúng tri thức của 6 bài học.
-            </div>
-            <div class="bg-white/60 p-4 rounded-2xl border-cozy">
-              <span class="font-bold text-cocoa block mb-1">✨ Wix / Wordpress</span>
-              Điều chỉnh độ mờ nền của các Container (`background-opacity: 85%`) và thiết lập độ bo góc đồng loạt (`Corner Radius: 32px`) để giữ nguyên hiệu ứng dán nhãn sticker dễ chịu.
-            </div>
-            <div class="bg-white/60 p-4 rounded-2xl border-cozy">
-              <span class="font-bold text-cocoa block mb-1">📝 Notion Portfolio</span>
-              Tạo cột song song bằng cách chia ngang màn hình. Sử dụng tính năng Callout và dán các biểu tượng Emojis học thuật tương ứng với 6 chương học để giữ đúng kết cấu nội dung.
-            </div>
-          </div>
-        </div>
-      </details>
-    </section>
-
   </main>
 
   <!-- FOOTER -->
@@ -580,12 +540,6 @@
         <p class="text-xs text-cocoa/40">
           Môn học Nhập môn công nghệ số và ứng dụng AI · ULIS - VNU
         </p>
-      </div>
-
-      <div class="flex items-center gap-6 text-xs md:text-sm font-bold">
-        <a href="#" class="hover:text-rose-400 transition-colors">Instagram</a>
-        <a href="#" class="hover:text-rose-400 transition-colors">Are.na</a>
-        <a href="#" class="hover:text-rose-400 transition-colors">Newsletter</a>
       </div>
     </div>
   </footer>
